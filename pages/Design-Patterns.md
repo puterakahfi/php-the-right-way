@@ -5,17 +5,17 @@ title: Design Patterns
 
 # Design Patterns
 
-There are numerous ways to structure the code and project for your web application, and you can put as much or as little
-thought as you like into architecting. But it is usually a good idea to follow common patterns because it will make
-your code easier to manage and easier for others to understand.
+Ada banyak cara untuk men-struktur kode dalam sebuah project website, dan Anda dapat meletakkan arsitektur
+sesuka anda. Namun, mengikuti standard pola / pattern yang sudah banyak digunakan adalah sebuah ide bagus.
+Karena hal tersebut akan membuat kode Anda lebih mudah di-maintain dan lebih mudah dibaca oleh orang lain.
 
 * [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
 
 ## Factory
 
-One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates
-the object you want to use. Consider the following example of the factory pattern:
+Salah satu design pattern yang sering digunakan yaitu Factory Pattern. Dalam pattern ini, sebuah class
+bertugas untuk membuat instance / object yang diinginkan. Coba ikuti contoh di bawah ini:
 
 {% highlight php %}
 <?php
@@ -50,15 +50,16 @@ $veyron = AutomobileFactory::create('Bugatti', 'Veyron');
 print_r($veyron->get_make_and_model()); // outputs "Bugatti Veyron"
 {% endhighlight %}
 
-This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
-way; the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
-will only have to modify the code in the factory, instead of every place in your project that uses the Automobile
-class. The second possible benefit is that if creating the object is a complicated job you can do all of the work in
-the factory, instead of repeating it every time you want to create a new instance.
+Kode ini menggunakan factory pattern untuk membuat Automobile object. Ada 2 kelebihan dalam membangun kode
+dengan cara seperti ini; pertama, jika nanti Anda ingin mengubah atau mengganti Automobile class Anda dapat
+melakukannya dengan mudah hanya dengan cara mengubah class Factory, bukannya dengan mengganti semua kode yang
+tersebar untuk membuat object. Kelebihan kedua, jika membuat instance object tersebut sangat rumit, anda 
+dapat melakukan pekerjaan rumit tersebut di dalam class factory, bukannya mengulang-ulang pekerjaan rumit
+tersebut di setiap tempat.
 
-Using the factory pattern isn't always necessary (or wise). The example code used here is so simple that a factory
-would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
-yourself a lot of trouble down the road by using factories.
+Menggunakan factory pattern tidaklah sebuah keharusan. Contoh kode yang dipakai di sini adalah kasus sederhana.
+Namun jika Anda membuat project yang sangat kompleks, mungkin anda akan menghemat banyak waktu dengan
+menggunakan factory pattern.
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
