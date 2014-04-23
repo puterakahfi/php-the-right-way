@@ -5,30 +5,30 @@ anchor: vagrant
 
 ## Vagrant {#vagrant_title}
 
-Running your application on different environments in development and production can lead to strange bugs 
-popping up when you go live. It's also tricky to keep different development environments up to date with the same 
-version for all libraries used when working with a team of developers. 
+Menjalankan aplikasi Anda pada lingkungan yang berbeda dalam pengembangan dan produksi dapat menyebabkan bug aneh
+muncul ketika Anda pergi hidup. Ini juga sulit untuk menjaga lingkungan pembangunan yang berbeda up to date dengan sama
+Versi untuk semua pustaka yang digunakan ketika bekerja dengan tim pengembang.
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you 
-should consider using a virtual machine. This sounds tricky, but using [Vagrant][vagrant] you can set up a simple 
-virtual machine with only a few steps. These base boxes can then be set up manually, or you can use "provisioning" 
-software such as [Puppet][puppet] or [Chef][chef] to do this for you. Provisioning the base box is a great way to 
-ensure that multiple boxes are set up in an identical fashion and removes the need for you to maintain complicated 
-"set up" command lists. You can also "destroy" your base box and recreate it without many manual steps, making it
-easy to create a "fresh" installation.
+Jika Anda mengembangkan di Windows dan menggunakan untuk Linux (atau apa pun non-Windows) atau sedang mengembangkan dalam sebuah tim, Anda
+harus mempertimbangkan menggunakan mesin virtual. Ini terdengar rumit, tapi menggunakan [Vagrant] [gelandangan] Anda dapat mengatur sederhana
+mesin virtual dengan hanya beberapa langkah. Kotak dasar ini kemudian dapat diatur secara manual, atau Anda dapat menggunakan "pengadaan"
+software seperti [Wayang] [wayang] atau [Chef] [chef] untuk melakukan ini untuk Anda. Provisioning kotak dasar adalah cara yang bagus untuk
+memastikan bahwa beberapa kotak ditetapkan dalam cara yang identik dan menghilangkan kebutuhan bagi Anda untuk menjaga rumit
+"set up" daftar perintah. Anda juga bisa "menghancurkan" kotak dasar Anda dan menciptakan tanpa banyak langkah manual, sehingga
+mudah untuk membuat "fresh" instalasi.
 
-Vagrant creates shared folders used to share your code between your host and your virtual machine, meaning you can 
-create and edit your files on your host machine and then run the code inside your virtual machine.
+Vagrant menciptakan shared folder yang digunakan untuk berbagi kode antara host dan mesin virtual Anda, yang berarti Anda dapat
+membuat dan mengedit file Anda pada mesin host Anda dan kemudian menjalankan kode di dalam mesin virtual Anda.
 
-### A little help
+### Bantuan Singkat
 
-If you need a little help to start using Vagrant there are three services that might be useful:
+Jika Anda perlu sedikit bantuan untuk mulai menggunakan Vagrant ada tiga layanan yang mungkin berguna:
 
-- [Rove][rove]: service that allows you to pregenerate typical Vagrant builds, PHP among the options. The
-  provisioning is made with Chef.
-- [Puphpet][puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides
-  local VMs, can be used to deploy to cloud services as well. The provisioning is made with Puppet.
-- [Protobox][protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML document controls everything that is installed on the virtual machine.
+- [Rove][rove]: layanan yang memungkinkan Anda untuk pregenerate khas Vagrant membangun, PHP antara pilihan. itu
+  penyediaan dibuat dengan Chef.
+- [Puphpet][puphpet]: GUI sederhana untuk mengatur mesin virtual untuk pengembangan PHP. ** Berat fokus di PHP **. selain
+  VMs lokal, dapat digunakan untuk menyebarkan awan layanan juga. Provisi ini dibuat dengan Wayang.
+- [Protobox][protobox]: adalah lapisan di atas vagrant dan GUI web untuk setup mesin virtual untuk pengembangan web. Sebuah dokumen YAML tunggal mengendalikan segala sesuatu yang diinstal pada mesin virtual.
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
