@@ -19,7 +19,7 @@ lebih bermanfaat jika telah tersedia.
 
 ## Translations
 
-_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+_PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 
 * [English](http://www.phptherightway.com)
 * [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
@@ -36,16 +36,16 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
 
-## How to Contribute
+## Bagaimana berkontribusi?
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+Bantulah website ini untuk menjadi referensi terbaik bagi progammer PHP baru! [Contribute on GitHub][1]
 
-## Spread the Word!
+## Sebarkan
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+_PHP: The Right Way_ memiliki gambar banner yang bisa dipasang di website Anda. Tunjukkan kepedulian anda dan
+tunjukkan kepada programmer PHP baru untuk mengetahui di mana tempat mendapatkan informasi yang bagus.
 
-[See Banner Images][2]
+[Gambar Banner][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
 [2]: /banners.html
