@@ -5,21 +5,17 @@ cara-cara buruk dan kode yang tidak aman. PHP: The Right Way adalah referensi ya
 mudah diikuti untuk PHP yang mengikuti standar pengkodean modern. Link ke tutorial 
 otoritatif di Web dan apa yang dianggap kontributor sebagai cara terbaik pada saat ini.
 
-There's a lot of outdated information on the Web that leads new PHP users astray,
-propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read,
-quick reference for PHP popular coding standards, links to authoritative tutorials
-around the Web and what the contributors consider to be best practices at the present
-time.
+Tidak ada cara autentik untuk menggunakan PHP. Website ini bertujuan untuk memperkenalkan 
+pengembang PHP baru untuk beberapa topik yang mereka mungkin tidak terlambat menemukan, 
+dan bertujuan untuk memberikan orang berpengalaman beberapa ide-ide segar pada 
+topik-topik yang telah mereka lakukan selama bertahun-tahun tanpa pernah mempertimbangkan kembali. 
+Website ini juga tidak akan memberitahu Anda alat-alat yang digunakan, tapi malah 
+menawarkan saran untuk beberapa pilihan, bila mungkin menjelaskan perbedaan dalam pendekatan 
+dan menggunakan kasus.
 
-_There is no canonical way to use PHP_. This website aims to introduce new PHP
-developers to some topics which they may not discover until it is too late, and aims
-to give seasoned pros some fresh ideas on those topics they've been doing for years
-without ever reconsidering. This website will also not tell you which tools to use, but
-instead offer suggestions for multiple options, when possible explaining the differences
-in approach and use-case.
 
-This is a living document and will continue to be updated with more helpful information
-and examples as they become available.
+Ini adalah dokumen hidup dan akan terus diperbarui dengan informasi dan contoh-contoh 
+lebih bermanfaat jika telah tersedia.
 
 ## Translations
 
