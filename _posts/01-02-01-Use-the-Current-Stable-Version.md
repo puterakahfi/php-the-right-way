@@ -1,12 +1,12 @@
 ---
-title: Use the Current Stable Version (5.5)
+title: Gunakan versi PHP stabil terbaru (5.5)
 isChild: true
 anchor: use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (5.5) {#use_the_current_stable_version_title}
+## Gunakan versi PHP stabil terbaru (5.5) {#use_the_current_stable_version_title}
 
-If you are just getting started with PHP make sure to start with the current stable release of [PHP 5.5][php-release]. PHP has made great strides adding powerful [new features](#language_highlights) over the last few years. Don't let the minor version number difference between 5.2 and 5.5 fool you, it represents _major_ improvements. If you are looking for a function or its usage, the documentation on the [php.net][php-docs] website will have the answer.
+Jika Anda baru saja mulai dengan PHP pastikan untuk memulai dengan rilis stabil saat ini [PHP 5.5] [php-release]. PHP telah membuat langkah besar menambahkan kuat [fitur baru] (# language_highlights) selama beberapa tahun terakhir. Jangan biarkan minor nomor versi perbedaan antara 5,2 dan 5,5 menipu Anda, itu merupakan perbaikan _major_. Jika Anda mencari fungsi atau penggunaannya, dokumentasi pada [php.net] [php-docs] situs web akan memiliki jawabannya.
 
 [php-release]: http://www.php.net/downloads.php
 [php-docs]: http://www.php.net/manual/en/
