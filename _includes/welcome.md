@@ -1,5 +1,10 @@
 # Selamat Datang
 
+Ada banyak informasi usang di Web yang menyesatkan pengguna PHP baru, menyebarkan 
+cara-cara buruk dan kode yang tidak aman. PHP: The Right Way adalah referensi yang
+mudah diikuti untuk PHP yang mengikuti standar pengkodean modern. Link ke tutorial 
+otoritatif di Web dan apa yang dianggap kontributor sebagai cara terbaik pada saat ini.
+
 There's a lot of outdated information on the Web that leads new PHP users astray,
 propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read,
 quick reference for PHP popular coding standards, links to authoritative tutorials
