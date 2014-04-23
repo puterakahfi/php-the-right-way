@@ -65,8 +65,8 @@ menggunakan factory pattern.
 
 ## Singleton
 
-When designing web applications, it often makes sense conceptually and architecturally to allow access to one and
-only one instance of a particular class. The singleton pattern enables us to do this.
+Ketika mendesain sebuah aplikasi, biasanya dibutuhkan sebuah object yang hanya boleh ada satu kali dalam 
+berjalannya proses tersebut. Singleton pattern akan membantu kita untuk melakukan hal itu.
 
 {% highlight php %}
 <?php
@@ -131,24 +131,25 @@ var_dump($anotherObj === Singleton::getInstance());      // bool(false)
 var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
 {% endhighlight %}
 
-The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
-Note the following:
+Kode di atas mengimplementasikan singleton pattern menggunakan static variable [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) dan static creation method `getInstance()`.
+Perhatikan hal-hal berikut:
 
-* The constructor [`__construct`](http://php.net/language.oop5.decon#object.construct) is declared as protected to prevent creating a new instance outside of the class via the `new` operator.
-* The magic method [`__clone`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
-* The magic method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent unserializing of an instance of the class via the global function [`unserialize()`](http://php.net/function.unserialize).
-* A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the example.
+* The constructor [`__construct`](http://php.net/language.oop5.decon#object.construct) dideklarasikan sebagai protected untuk mencegah pembuatan object di luar singleton pattern.
+* The magic method [`__clone`](http://php.net/language.oop5.cloning#object.clone) dideklarasikan sebagai private untuk mencegah clone melalui [`clone`](http://php.net/language.oop5.cloning) operator.
+* The magic method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup) dideklarasikan sebagai private untuk mencegah unserializing sebuah object melalui global function [`unserialize()`](http://php.net/function.unserialize).
+* Sebuah object baru dibuat melalui [late static binding](http://php.net/language.oop5.late-static-bindings) pada static method `getInstance()` dengan keyword `static`. Cara ini membuat kita memenuhi `Singleton` dalam contoh ini.
 
-The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
-request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
-class) or a shared resource (such as an event queue).
+Singleton pattern berguna ketika kita perlu memastikan bahwa kita hanya memiliki satu instance dari class untuk seluruh
+siklus hidup dalam aplikasi web. Hal ini biasanya terjadi ketika kita memiliki objek global (seperti konfigurasi sebuah
+class) atau resource bersama (seperti antrian event).
 
-You should be wary when using the singleton pattern, as by its very nature it introduces global state into your
-application, reducing testability. In most cases, dependency injection can (and should) be used in place of a
-singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
-application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
+Anda harus berhati-hati ketika menggunakan singleton pattern, seperti sifatnya memperkenalkan state global ke dalam
+aplikasi, akan mengurangi testability. Dalam kebanyakan kasus, injeksi ketergantungan dapat (dan harus) 
+digunakan di tempat dari kelas tunggal. Menggunakan injeksi ketergantungan berarti bahwa kita tidak 
+memperkenalkan pasangan tidak perlu ke dalam desain aplikasi, sebagai obyek menggunakan resource bersama atau 
+global membutuhkan pengetahuan tentang kelas didefinisikan secara konkret.
 
-* [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+* [Singleton pattern di Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
 ## Strategy
 
