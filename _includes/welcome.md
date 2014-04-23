@@ -17,7 +17,7 @@ dan menggunakan kasus.
 Ini adalah dokumen hidup dan akan terus diperbarui dengan informasi dan contoh-contoh 
 lebih bermanfaat jika telah tersedia.
 
-## Translations
+## Terjemahan
 
 _PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 
