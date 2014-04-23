@@ -153,12 +153,11 @@ global membutuhkan pengetahuan tentang kelas didefinisikan secara konkret.
 
 ## Strategy
 
-With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for 
-instantiating a particular algorithm to have no knowledge of the actual implementation.
-There are several variations on the strategy pattern, the simplest of which is outlined below:
+Dengan strategy pattern, anda membungkus algoritma sejenis sehingga membuat class client 
+bertanggung jawab untuk membuat instance dari sebuah algoritma spesifik tanpa perlu tahu implementasi
+sesungguhnya. Ada beberapa variasi strategy pattern, salah satunya yang paling simpel yaitu:
 
-This first code snippet outlines a family of algorithms; you may want a serialized array, some JSON or maybe 
-just an array of data:
+Kode pertama menunjukkan keluarga algoritma; untuk serialize array, json, atau array of data:
 {% highlight php %}
 <?php
 
@@ -192,16 +191,16 @@ class ArrayOutput implements OutputInterface
 }
 {% endhighlight %}
 
-By encapsulating the above algorithms you are making it nice and clear in your code that other developers can easily 
-add new output types without affecting the client code.
+Dengan membungkus algoritma di atas Anda membuat itu bagus dan jelas dalam kode Anda bahwa pengembang lain dapat dengan mudah
+menambahkan jenis keluaran baru tanpa mempengaruhi kode klien.
 
-You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
-provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
-interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/manual/en/language.oop5.typehinting.php) to ensure that the client which is utilising these behaviours is of the correct type in
-this case 'OutputInterface'.
+Anda akan melihat bagaimana masing-masing 'output' konkret class mengimplementasikan OutputInterface - ini melayani dua tujuan, terutama itu
+memberikan kontrak sederhana yang harus dipatuhi oleh setiap implementasi beton baru. Kedua dengan menerapkan umum
+antarmuka Anda akan melihat di bagian berikutnya bahwa sekarang Anda dapat memanfaatkan [Type Hinting] (http://php.net/manual/en/language.oop5.typehinting.php) untuk memastikan bahwa klien yang memanfaatkan perilaku ini adalah jenis yang tepat dalam
+kasus ini 'OutputInterface'.
 
-The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
-behaviour required at runtime:
+Potongan kode yang berikutnya menguraikan bagaimana kelas client memanggil mungkin menggunakan salah satu 
+algoritma ini dan bahkan lebih baik mengatur perilaku yang diperlukan pada saat runtime:
 {% highlight php %}
 <?php
 
@@ -239,24 +238,24 @@ $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Strategy pattern on Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
+* [Strategy pattern di Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
 
 ## Front Controller
 
-The front controller pattern is where you have a single entrance point for you web application (e.g. index.php) that
-handles all of the requests. This code is responsible for loading all of the dependencies, processing the request and
-sending the response to the browser. The front controller pattern can be beneficial because it encourages modular code
-and gives you a central place to hook in code that should be run for every request (such as input sanitization).
+Pola Controller depan adalah di mana Anda memiliki titik pintu masuk tunggal untuk aplikasi web Anda (misalnya index.php) yang
+menangani semua permintaan. Kode ini bertanggung jawab untuk memuat semua dependensi, memproses permintaan dan
+mengirim respon ke browser. Pola Controller depan dapat bermanfaat karena mendorong kode modular
+dan memberikan Anda sebuah tempat sentral untuk menghubungkan dalam kode yang harus dijalankan untuk setiap permintaan (seperti input sanitasi).
 
-* [Front Controller pattern on Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
+* [Front Controller pattern di Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
 
 ## Model-View-Controller
 
-The model-view-controller (MVC) pattern and its relatives HMVC and MVVM lets you break up code into logical objects that serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable throughout your application. Controllers handle the request, process the data returned from models and load views to send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web browser.
+Model-view-controller (MVC) pola dan kerabat HMVC dan MVVM memungkinkan Anda memecah kode ke objek logis yang melayani tujuan yang sangat spesifik. Model berfungsi sebagai lapisan akses data dimana data diambil dan dikembalikan dalam format yang dapat digunakan di seluruh aplikasi Anda. Controller menangani permintaan, proses data kembali dari model dan pandangan beban untuk mengirimkan respon. Dan pandangan tampilan template (markup, xml, dll) yang dikirim dalam penanggulangan browser web.
 
-MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+MVC adalah arsitektur paling sering dijumpai pada framework PHP modern [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
 
-Learn more about MVC and its relatives:
+Pelajari lebih lanjut tentang MVC dan kerabat:
 
 * [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
 * [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller)
