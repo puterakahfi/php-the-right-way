@@ -1,39 +1,39 @@
 ---
+title: Panduan Code Style
 anchor: code_style_guide
 ---
 
-# Code Style Guide  {#code_style_guide_title}
+# Panduan Code Style  {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+Komunitas PHP adalah besar dan beragam, terdiri dari perpustakaan yang tak terhitung banyaknya, kerangka kerja, dan komponen. Adalah umum bagi
+Pengembang PHP untuk memilih beberapa ini dan menggabungkan mereka ke dalam satu proyek. Adalah penting bahwa kode PHP mematuhi
+(sedekat mungkin) dengan gaya kode umum untuk memudahkan bagi pengembang untuk mencampur dan mencocokkan berbagai perpustakaan untuk
+proyek-proyek mereka.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related 
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These recommendations 
-are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, 
-etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
+The [Kerangka Interop Grup] [ara] telah mengusulkan dan menyetujui serangkaian rekomendasi gaya. Tidak semua dari mereka terkait
+kode-gaya, tapi mereka yang melakukan [PSR-0] [psr0], [PSR-1] [PSR1], [PSR-2] [psr2] dan [PSR-4] [psr4]. rekomendasi ini
+hanyalah seperangkat aturan bahwa beberapa proyek seperti Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium,
+dll mulai mengadopsi. Anda dapat menggunakannya untuk proyek-proyek Anda sendiri, atau terus menggunakan gaya pribadi Anda sendiri.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one 
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, 
-and applications that implement the components can have consistency even when working with lots of third-party code. 
+Idealnya Anda harus menulis kode PHP yang mematuhi standar yang dikenal. Ini bisa berupa kombinasi dari PSR, atau satu
+standar coding yang dibuat oleh PEAR atau Zend. Ini berarti pengembang lain dapat dengan mudah membaca dan bekerja dengan kode Anda,
+dan aplikasi yang menerapkan komponen dapat memiliki konsistensi bahkan ketika bekerja dengan banyak kode pihak ketiga.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Zend Coding Standards][zend-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [Baca tentang PSR-0][psr0]
+* [Baca tentang PSR-1][psr1]
+* [Baca tentang PSR-2][psr2]
+* [Baca tentang PSR-4][psr4]
+* [Baca tentang PEAR Coding Standards][pear-cs]
+* [Baca tentang Zend Coding Standards][zend-cs]
+* [Baca tentang Symfony Coding Standards][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text editors 
-like [Sublime Text 2][st-cs] to be given real time feedback. 
+Anda dapat menggunakan [PHP_CodeSniffer] [phpcs] untuk memeriksa kode terhadap salah satu dari rekomendasi tersebut, dan plugin untuk editor teks seperti [Text Sublime 2] [st-cs] diberikan umpan balik real time.
 
-Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
-conforms to these standards, saving you from fixing each problem by hand.
+Gunakan Fabien Potencier ini [PHP Coding Standards Fixer] [phpcsfixer] untuk secara otomatis mengubah sintaks kode Anda sehingga
+sesuai dengan standar-standar ini, menghemat dari memperbaiki setiap masalah dengan tangan.
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable 
-by all current and future parties who may be working on the codebase.
+Bahasa Inggris lebih disukai untuk semua nama simbol dan infrastruktur kode. Komentar dapat ditulis dalam bahasa yang mudah dibaca
+oleh semua pihak saat ini dan masa depan yang mungkin bekerja di basis kode.
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
