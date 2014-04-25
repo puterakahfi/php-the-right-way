@@ -35,6 +35,7 @@ _PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 * [German](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
+* [Indonesian](http://andylibrian.github.io/php-the-right-way)
 
 ## Bagaimana berkontribusi?
 
