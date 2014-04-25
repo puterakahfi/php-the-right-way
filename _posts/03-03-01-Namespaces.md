@@ -5,29 +5,29 @@ anchor: namespaces
 
 ## Namespaces {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that 
-one library's PHP code may use the same class name as another library. When both libraries are used 
-in the same namespace, they collide and cause trouble.
+Sebagaimana disebutkan di atas, komunitas PHP memiliki banyak pengembang menciptakan banyak kode. Ini berarti bahwa
+kode PHP satu perpustakaan dapat menggunakan nama kelas yang sama dengan perpustakaan lain. Ketika kedua perpustakaan digunakan
+dalam namespace yang sama, mereka bertabrakan dan menyebabkan masalah.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared 
-to operating system directories that _namespace_ files; two files with the same name may co-exist in 
-separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP 
-namespaces. It's as simple as that.
 
-It is important for you to namespace your code so that it may be used by other developers without fear 
-of colliding with other libraries.
+_Namespaces_ Memecahkan masalah ini. Seperti dijelaskan dalam manual referensi PHP, ruang nama dapat dibandingkan
+ke direktori sistem operasi yang _namespace_ file; dua file dengan nama yang sama dapat hidup berdampingan dalam
+direktori terpisah. Demikian juga, dua kelas PHP dengan nama yang sama dapat hidup berdampingan dalam PHP terpisah
+namespaces. Ini sesederhana itu.
 
-One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, 
-class and namespace convention to allow plug-and-play code.
+Hal ini penting bagi Anda untuk namespace kode Anda sehingga dapat digunakan oleh pengembang lain tanpa rasa takut
+bertabrakan dengan perpustakaan lain.
 
-In December 2013 the PHP-FIG created a new autoloading standard: [PSR-4][psr4], which one day will 
-probably replace PSR-0. Currently both are still usable, as PSR-4 requires PHP 5.3 and many PHP 5.2-only 
-projects currently implement PSR-0. If you're going to use an autoloader standard for a new application or 
-package then you almost certainly want to look into PSR-4.
+Salah satu cara yang direkomendasikan untuk menggunakan namespaces diuraikan dalam [PSR-0] [psr0], yang bertujuan untuk memberikan file standar, kelas dan namespace konvensi untuk memungkinkan kode plug-and-play.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
-* [Read about PSR-4][psr4]
+Pada bulan Desember 2013 PHP-FIG menciptakan standar baru autoloading: [PSR-4] [psr4], yang suatu saat akan
+mungkin menggantikan PSR-0. Saat ini keduanya masih digunakan, sebagai PSR-4 membutuhkan PHP 5.3 dan banyak PHP 5.2-only
+proyek yang saat ini menerapkan PSR-0. Jika Anda akan menggunakan standar autoloader untuk aplikasi baru atau
+Paket maka Anda hampir pasti ingin melihat ke dalam PSR-4.
+
+* [Baca tentang Namespaces][namespaces]
+* [Baca tentang PSR-0][psr0]
+* [Baca tentang PSR-4][psr4]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
