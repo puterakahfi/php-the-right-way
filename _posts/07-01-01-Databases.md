@@ -5,30 +5,30 @@ anchor: databases
 
 # Databases {#databases_title}
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
+Banyak kali kode PHP Anda akan menggunakan database untuk bertahan informasi . Anda memiliki beberapa pilihan untuk menghubungkan dan berinteraksi
+dengan database Anda . Pilihan yang dianjurkan _until PHP 5.1.0_ adalah menggunakan driver asli seperti [ mysql ] [ mysql ] , [ mysqli ] [ mysqli ] , [ pgsql ] [ pgsql ] , dll
 
-Native drivers are great if you are only using ONE database in your application, but if, for example, you are using MySQL and a little bit of MSSQL,
-or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
-database &mdash; and that can get silly.
+Driver asli yang besar jika Anda hanya menggunakan SATU database dalam aplikasi Anda , tetapi jika , misalnya , Anda menggunakan MySQL dan sedikit MSSQL ,
+atau Anda perlu menghubungkan ke database Oracle , maka Anda tidak akan dapat menggunakan driver yang sama . Anda akan perlu belajar API baru untuk masing-masing
+Database - dan yang bisa konyol .
 
-As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and is officially deprecated as of PHP 5.5, meaning that it will be removed within the next few releases. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development schedules so you won't
-be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
+Sebagai catatan tambahan pada driver asli , ekstensi mysql untuk PHP tidak lagi aktif dalam pembangunan , dan secara resmi ditinggalkan pada PHP 5.5 , yang berarti bahwa itu akan dihapus dalam beberapa rilis berikutnya . Jika Anda menggunakan ` mysql_connect ( ) ` dan ` mysql_query ( ) ` dalam aplikasi Anda maka Anda akan dihadapkan dengan penulisan ulang di beberapa titik bawah
+line, sehingga pilihan terbaik adalah untuk menggantikan penggunaan mysql dengan mysqli atau PDO dalam aplikasi Anda dalam jadwal pembangunan Anda sendiri sehingga Anda tidak akan
+terburu-buru nanti . _If Anda memulai dari awal maka benar-benar tidak menggunakan ekstensi mysql : menggunakan [ MySQLi extension ] [ mysqli ] , atau menggunakan PDO._
 
 * [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
-PDO is a database connection abstraction library &mdash;  built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
-many different databases. PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types
-of database with the same API.
+PDO adalah database perpustakaan koneksi abstraksi - dibangun ke PHP 5.1.0 sejak - yang menyediakan antarmuka umum untuk berbicara dengan
+banyak database yang berbeda. PDO tidak akan menerjemahkan query SQL atau meniru fitur yang hilang; itu adalah murni untuk menghubungkan ke beberapa jenis
+database dengan API yang sama.
 
-More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks.
-This is possible using PDO statements and bound parameters.
+Lebih penting lagi, `` PDO memungkinkan Anda untuk dengan aman menyuntikkan masukan asing (misalnya ID) ke dalam query SQL Anda tanpa khawatir tentang database serangan injeksi SQL.
+Ini dimungkinkan dengan pernyataan PDO dan parameter terikat.
 
-Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record from a database. This is the `wrong`
-way to do this:
+Mari kita asumsikan script PHP menerima ID numerik sebagai parameter permintaan. ID ini harus digunakan untuk mengambil catatan pengguna dari database. Ini adalah `salah`
+cara untuk melakukan ini:
 
 {% highlight php %}
 <?php
@@ -36,10 +36,10 @@ $pdo = new PDO('sqlite:users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
-This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
-`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `1;DELETE FROM users`
-which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
+Ini adalah kode yang mengerikan. Anda memasukkan parameter permintaan mentah menjadi query SQL. Ini akan membuat Anda hack dalam
+detak jantung. Bayangkan saja jika seorang hacker lewat di parameter inventif `id` dengan memanggil URL seperti
+`http://domain.com/?id=1% 3BDELETE + FROM pengguna +`. Ini akan mengatur `$ _GET ['id']` variabel `1; DELETE FROM pengguna`
+yang akan menghapus semua pengguna Anda! Sebaliknya, Anda harus membersihkan ID input menggunakan PDO terikat parameter.
 
 {% highlight php %}
 <?php
@@ -49,27 +49,27 @@ $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); // <-- Automatically sanit
 $stmt->execute();
 {% endhighlight %}
 
-This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
-database preventing potential SQL injection attacks.
+Ini adalah kode yang benar. Ini menggunakan parameter terikat pada pernyataan PDO. Ini lolos ID masukan asing sebelum diperkenalkan ke
+Database mencegah serangan injeksi SQL potensial.
 
-* [Learn about PDO][1]
+* [Pelajari tentang PDO][1]
 
-You should also be aware that database connections use up resources and it was not unheard-of to have resources
-exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
-can implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted,
-i.e. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends -
-unless of course you are using persistent connections.
+Anda juga harus menyadari bahwa koneksi database menggunakan sumber daya dan itu tidak pernah terdengar-dari memiliki sumber daya
+habis jika koneksi tidak secara implisit ditutup, namun ini lebih umum dalam bahasa lain. Menggunakan PDO Anda
+implisit dapat menutup koneksi dengan menghancurkan objek dengan memastikan semua referensi yang tersisa untuk itu akan dihapus,
+yaitu diatur ke NULL. Jika Anda tidak melakukan ini secara eksplisit, PHP secara otomatis akan menutup koneksi ketika naskah Anda berakhir -
+kecuali tentu saja Anda menggunakan koneksi persistent.
 
-* [Learn about PDO connections][5]
+* [Pelajari tentang PDO connections][5]
 
 ## Abstraction Layers
 
-Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
-one database system that another is missing from another by wrapping your queries in PHP methods, giving you actual database abstraction.
-This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
-SQLite then a little overhead will be worth it the sake of code cleanliness.
+Banyak kerangka menyediakan lapisan abstraksi mereka sendiri yang mungkin atau mungkin tidak duduk di atas PDO. Ini akan sering meniru fitur untuk
+satu sistem database yang lain hilang dari yang lain dengan membungkus pertanyaan Anda dalam metode PHP, memberikan Anda abstraksi database sebenarnya.
+Hal ini tentu saja akan menambah biaya overhead sedikit, tetapi jika Anda sedang membangun sebuah aplikasi portable yang perlu untuk bekerja dengan MySQL, PostgreSQL dan
+SQLite maka overhead kecil akan sia-sia demi kode kebersihan.
 
-Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be installed in any application you like:
+Beberapa lapisan abstraksi telah dibangun menggunakan [PSR-0] [psr0] atau [PSR-4] [psr4] standar namespace sehingga dapat diinstal dalam aplikasi apapun yang Anda suka:
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
