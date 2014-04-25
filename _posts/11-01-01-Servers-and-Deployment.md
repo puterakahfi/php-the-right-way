@@ -1,7 +1,8 @@
 ---
+title: Servers dan Deployment
 anchor: servers_and_deployment
 ---
 
-# Servers and Deployment {#servers_and_deployment_title}
+# Servers dan Deployment {#servers_and_deployment_title}
 
-PHP applications can be deployed and run on production web servers in a number of ways.
+Aplikasi PHP dapat digunakan dan dijalankan pada server web produksi dalam beberapa cara.
