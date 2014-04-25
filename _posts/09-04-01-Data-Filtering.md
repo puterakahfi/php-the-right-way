@@ -5,60 +5,60 @@ anchor: data_filtering
 
 ## Data Filtering {#data_filtering_title}
 
-Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
-foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.
-email addresses).
+Tidak pernah ( pernah) kepercayaan masukan asing diperkenalkan ke kode PHP Anda . Selalu membersihkan dan memvalidasi
+masukan asing sebelum menggunakannya dalam kode . The ` filter_var ` dan ` filter_input ` fungsi dapat membersihkan teks dan memvalidasi format teks ( misalnya
+alamat email ) .
 
-Foreign input can be anything: `$_GET` and `$_POST` form input data, some values in the `$_SERVER`
-superglobal, and the HTTP request body via `fopen('php://input', 'r')`. Remember, foreign input is not
-limited to form data submitted by the user. Uploaded and downloaded files, session values, cookie data,
-and data from third-party web services are foreign input, too.
+Masukan asing bisa apa saja : ` $ _GET ` dan ` $ _POST ` input data form, beberapa nilai dalam ` $ _SERVER `
+superglobal , dan HTTP request tubuh melalui ` fopen ( ' php :/ / input' , ' r ' ) ` . Ingat , masukan asing tidak
+terbatas untuk membentuk data yang diajukan oleh pengguna . Upload dan download file , nilai session , data cookie ,
+dan data dari layanan web pihak ketiga adalah input asing , juga.
 
-While foreign data can be stored, combined, and accessed later, it is still foreign input. Every
-time you process, output, concatenate, or include data in your code, ask yourself if
-the data is filtered properly and can it be trusted.
+Sedangkan data asing dapat disimpan , dikombinasikan , dan diakses kemudian, masih masukan asing . setiap
+kali Anda memproses , output, menggabungkan , atau menyertakan data dalam kode Anda , tanyakan pada diri Anda apakah
+Data disaring dengan baik dan hal itu dapat dipercaya .
 
-Data may be _filtered_ differently based on its purpose. For example, when unfiltered foreign input is passed
-into HTML page output, it can execute HTML and JavaScript on your site! This is known as Cross-Site
-Scripting (XSS) and can be a very dangerous attack. One way to avoid XSS is to sanitize all user-generated
-data before outputting it to your page by removing HTML tags with the `strip_tags` function or escaping
-characters with special meaning into their respective HTML entities with the `htmlentities`
-or `htmlspecialchars` functions.
+Data dapat _filtered_ berbeda berdasarkan tujuannya . Misalnya, ketika masukan asing tanpa filter dilewatkan
+menjadi output halaman HTML , dapat mengeksekusi HTML dan JavaScript di situs Anda! Hal ini dikenal sebagai Cross- Site
+Scripting ( XSS ) dan bisa menjadi serangan yang sangat berbahaya . Salah satu cara untuk menghindari XSS adalah untuk membersihkan semua user-generated
+data sebelum keluaran ke halaman Anda dengan menghapus tag HTML dengan ` ` strip_tags fungsi atau melarikan diri
+karakter dengan makna khusus menjadi entitas HTML masing-masing dengan ` htmlentities `
+atau ` fungsi htmlspecialchars ` .
 
-Another example is passing options to be executed on the command line. This can be extremely dangerous
-(and is usually a bad idea), but you can use the built-in `escapeshellarg` function to sanitize the executed
-command's arguments.
+Contoh lain adalah lewat opsi akan dieksekusi pada baris perintah . Ini bisa sangat berbahaya
+( dan biasanya ide yang buruk ) , tetapi Anda dapat menggunakan built -in ` escapeshellarg ` berfungsi untuk membersihkan dieksekusi
+argumen perintah itu .
 
-One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
-changing the filename to a file path. You need to remove "/", "../", [null bytes][6], or other characters from the file path so it can't
-load hidden, non-public, or sensitive files.
+Salah satu contoh terakhir adalah menerima masukan asing untuk menentukan file untuk memuat dari filesystem . Hal ini dapat dimanfaatkan oleh
+mengubah nama file ke path file . Anda harus menghapus " / " , " .. / " , [ nol byte ] [ 6 ] , atau karakter lain dari path file sehingga tidak bisa
+memuat file tersembunyi , non - publik , atau sensitif .
 
-* [Learn about data filtering][1]
-* [Learn about `filter_var`][4]
-* [Learn about `filter_input`][5]
-* [Learn about handling null bytes][6]
+* [Pelajari tentang data filtering][1]
+* [Pelajari tentang `filter_var`][4]
+* [Pelajari tentang `filter_input`][5]
+* [Pelajari tentang handling null bytes][6]
 
 ### Sanitization
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
+Menghapus Sanitasi (atau lolos) ilegal atau tidak aman karakter dari input asing.
 
-For example, you should sanitize foreign input before including the input in HTML or inserting it
-into a raw SQL query. When you use bound parameters with [PDO](#databases), it will
-sanitize the input for you.
+Misalnya, Anda harus membersihkan masukan asing sebelum termasuk input dalam HTML atau memasukkan itu
+menjadi query SQL mentah. Bila Anda menggunakan parameter terikat dengan [PDO] (# database), maka akan
+membersihkan masukan untuk Anda.
 
-Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML
-page. This is very hard to do and many avoid it by using other more restricted formatting like
-Markdown or BBCode, although whitelisting libraries like [HTML Purifier][html-purifier] exists for
-this reason.
+Kadang-kadang diperlukan untuk memungkinkan beberapa tag HTML aman di input ketika termasuk dalam HTML
+halaman. Hal ini sangat sulit untuk dilakukan dan banyak menghindarinya dengan menggunakan format lebih terbatas lainnya seperti
+Penurunan harga atau BBCode, meskipun membolehkan akses perpustakaan seperti [HTML Purifier] [html-pembersih] ada untuk
+alasan ini.
 
-[See Sanitization Filters][2]
+[Lihat Sanitization Filters][2]
 
 ### Validation
 
-Validation ensures that foreign input is what you expect. For example, you may want to validate an
-email address, a phone number, or age when processing a registration submission.
+Validasi memastikan bahwa masukan asing adalah apa yang Anda harapkan. Sebagai contoh, Anda mungkin ingin untuk memvalidasi
+alamat email, nomor telepon, atau usia saat memproses pengajuan pendaftaran.
 
-[See Validation Filters][3]
+[Lihat Validation Filters][3]
 
 [1]: http://www.php.net/manual/en/book.filter.php
 [2]: http://www.php.net/manual/en/filter.filters.sanitize.php

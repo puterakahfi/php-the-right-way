@@ -1,16 +1,17 @@
 ---
+title: File Konfigurasi
 isChild: true
 anchor: configuration_files
 ---
 
-## Configuration Files {#configuration_files_title}
+## File Konfigurasi {#configuration_files_title}
 
-When creating configuration files for your applications, best practices recommend that one of the following methods 
-be followed:
+Ketika membuat file konfigurasi untuk aplikasi Anda, praktik terbaik merekomendasikan bahwa salah satu metode berikut
+harus diikuti:
 
-- It is recommended that you store your configuration information where it cannot be accessed directly and pulled in 
-via the file system.
-- If you must store your configuration files in the document root, name the files with a `.php` extension. This 
-ensures that, even if the script is accessed directly, it will not be output as plain text.
-- Information in configuration files should be protected accordingly, either through encryption or group/user file 
-system permissions
+- Dianjurkan agar Anda menyimpan informasi konfigurasi Anda di mana tidak dapat diakses secara langsung dan ditarik
+melalui sistem file.
+- Jika Anda harus menyimpan file konfigurasi di root dokumen, nama file dengan ekstensi php ``.. ini
+memastikan bahwa, bahkan jika script diakses secara langsung, itu tidak akan menjadi output sebagai teks biasa.
+- Informasi dalam file konfigurasi harus dilindungi sesuai, baik melalui enkripsi atau file group / user
+sistem perizinan

@@ -5,15 +5,15 @@ anchor: password_hashing
 
 ## Password Hashing {#password_hashing_title}
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a database and later used to authenticate users upon login.
+Akhirnya semua orang membangun aplikasi PHP yang bergantung pada pengguna login. Username dan password yang disimpan dalam database dan kemudian digunakan untuk autentikasi pengguna pada saat login.
 
-It is important that you properly [_hash_][3] passwords before storing them. Password hashing is an irreversible, one way function performed against the user's password. This produces a fixed-length string that cannot be feasibly reversed. This means you can compare a hash against another to determine if they both came from the same source string, but you cannot determine the original string. If passwords are not hashed and your database is accessed by an unauthorized third-party, all user accounts are now compromised. Some users may (unfortunately) use the same password for other services. Therefore, it is important to take security seriously.
+Adalah penting bahwa Anda benar [_hash_] [3] password sebelum menyimpannya. Sandi hashing adalah ireversibel, fungsi salah satu cara yang dilakukan terhadap password user. Ini menghasilkan string tetap-panjang yang tidak memungkinkan untuk bisa terbalik. Ini berarti Anda dapat membandingkan hash terhadap yang lain untuk menentukan apakah mereka berdua datang dari sumber string yang sama, tetapi Anda tidak bisa menentukan string asli. Jika password tidak hash dan database Anda diakses oleh pihak ketiga yang tidak sah, semua akun pengguna sekarang dikompromikan. Beberapa pengguna mungkin (sayangnya) menggunakan password yang sama untuk layanan lainnya. Oleh karena itu, penting untuk mengambil keamanan serius.
 
-**Hashing passwords with `password_hash`**
+**Hashing passwords dengan `password_hash`**
 
-In PHP 5.5 `password_hash` was introduced. At this time it is using BCrypt, the strongest algorithm currently supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat` library was created to provide forward compatibility for PHP >= 5.3.7.
+Dalam PHP 5.5 `password_hash` diperkenalkan. Pada saat ini adalah menggunakan BCrypt, algoritma terkuat saat ini didukung oleh PHP. Ini akan diperbarui di masa depan untuk mendukung lebih algoritma yang diperlukan sekalipun. The `password_compat` perpustakaan diciptakan untuk menyediakan kompatibilitas ke depan untuk PHP> = 5.3.7.
 
-Below we hash a string, and then check the hash against a new string. Because our two source strings are different ('secret-password' vs. 'bad-password') this login will fail.
+Di bawah ini kami hash string, dan kemudian memeriksa hash terhadap string baru. Karena kami dua string sumber yang berbeda ('rahasia-password' vs 'buruk-password') login ini akan gagal.
 
 {% highlight php %}
 <?php

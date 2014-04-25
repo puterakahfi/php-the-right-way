@@ -1,14 +1,15 @@
 ---
+title: Keamanan Aplikasi Web
 isChild: true
 anchor: web_application_security
 ---
 
-## Web Application Security {#web_application_security_title}
+## Keamanan Aplikasi Web {#web_application_security_title}
 
-There are bad people ready and willing to exploit your web application. It is important that you
- take necessary precautions to harden your web application's security. Luckily, the fine folks at [The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and methods to protect yourself against them. This is a must read for the security-conscious developer.
+Ada orang jahat siap dan bersedia untuk mengeksploitasi aplikasi web Anda. Adalah penting bahwa Anda
+  mengambil tindakan yang diperlukan untuk mengeraskan keamanan aplikasi web Anda. Untungnya, orang-orang baik di [Open Web Application Security Project] [1] (OWASP) telah mengumpulkan daftar lengkap dari isu-isu keamanan yang telah diketahui dan metode untuk melindungi diri terhadap mereka. Ini adalah harus dibaca bagi pengembang sadar keamanan.
 
-* [Read the OWASP Security Guide][2]
+* [Baca tentang OWASP Security Guide][2]
 
 [1]: https://www.owasp.org/
 [2]: https://www.owasp.org/index.php/Guide_Table_of_Contents
