@@ -5,10 +5,10 @@ anchor: complementary_testing_tools
 
 ## Complementary Testing Tools {#complementary_testing_tools_title}
 
-Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
+Selain pengujian individu dan kerangka perilaku didorong, ada juga sejumlah kerangka generik dan perpustakaan pembantu berguna untuk setiap pendekatan yang lebih disukai diambil.
 
 ### Tool Links
 
-* [Selenium](http://seleniumhq.org/) is a browser automation tool which can be [integrated with PHPUnit](http://phpunit.de/manual/current/en/selenium.html)
-* [Mockery](https://github.com/padraic/mockery) is a Mock Object Framework which can be integrated with [PHPUnit](http://phpunit.de/) or [PHPSpec](http://www.phpspec.net/)
-* [Prophecy](https://github.com/phpspec/prophecy) is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with [PHPSpec](http://www.phpspec.net/) and can be used with [PHPUnit](http://phpunit.de/).
+* [Selenium](http://seleniumhq.org/) adalah alat otomatisasi peramban yang dapat [diintegrasikan dengan PHPUnit](http://phpunit.de/manual/current/en/selenium.html)
+* [Mockery](https://github.com/padraic/mockery) adalah Object Kerangka Mock yang dapat diintegrasikan dengan [PHPUnit](http://phpunit.de/) or [PHPSpec](http://www.phpspec.net/)
+* [Prophecy](https://github.com/phpspec/prophecy) adalah sangat dogmatis namun objek PHP sangat kuat dan fleksibel mengejek kerangka. Ini terintegrasi dengan [PHPSpec](http://www.phpspec.net/) dan dapat digunakan dengan [PHPUnit](http://phpunit.de/).

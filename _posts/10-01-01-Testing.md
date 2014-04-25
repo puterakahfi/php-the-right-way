@@ -4,10 +4,10 @@ anchor: testing
 
 # Testing {#testing_title}
 
-Writing automated tests for your PHP code is considered a best practice and can lead to well-built
-applications. Automated tests are a great tool for making sure your application
-does not break when you are making changes or adding new functionality and should not be ignored.
+Menulis tes otomatis untuk kode PHP Anda dianggap sebagai praktek terbaik dan dapat menyebabkan tegap
+aplikasi. Tes otomatis adalah alat yang hebat untuk memastikan aplikasi Anda
+tidak pecah ketika Anda membuat perubahan atau menambahkan fungsi baru dan tidak boleh diabaikan.
 
-There are several different types of testing tools (or frameworks) available for PHP, which use 
-different approaches - all of which are trying to avoid manual testing and the need for large 
-Quality Assurance teams, just to make sure recent changes didn't break existing functionality.
+Ada beberapa jenis alat pengujian (atau kerangka kerja) yang tersedia untuk PHP, yang menggunakan
+pendekatan yang berbeda - yang semuanya berusaha untuk menghindari pengujian manual dan kebutuhan untuk besar
+Tim Quality Assurance, hanya untuk membuat perubahan terbaru yakin tidak mematahkan fungsi yang ada.
