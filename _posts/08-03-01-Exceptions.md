@@ -5,20 +5,20 @@ anchor: exceptions
 
 ## Exceptions {#exceptions_title}
 
-Exceptions are a standard part of most popular programming languages, but they are often overlooked by PHP programmers. 
-Languages like Ruby are extremely Exception heavy, so whenever something goes wrong such as a HTTP request failing, or 
-a DB query goes wrong, or even if an image asset could not be found, Ruby (or the gems being used) will throw an 
-exception to the screen meaning you instantly know there is a mistake. 
+Pengecualian adalah bagian standar dari kebanyakan bahasa pemrograman populer, tetapi mereka sering diabaikan oleh programmer PHP .
+Bahasa seperti Ruby sangat Exception berat , sehingga setiap kali sesuatu yang tidak beres seperti permintaan HTTP gagal , atau
+query DB tidak beres , atau bahkan jika aset gambar tidak dapat ditemukan , Ruby ( atau permata yang digunakan ) akan memunculkan
+pengecualian ke layar berarti Anda langsung tahu ada kesalahan .
 
-PHP itself is fairly lax with this, and a call to `file_get_contents()` will usually just get you a `FALSE` and a warning.
-Many older PHP frameworks like CodeIgniter will just return a false, log a message to their proprietary logs and maybe 
-let you use a method like `$this->upload->get_error()` to see what went wrong. The problem here is that you have to go 
-looking for a mistake and check the docs to see what the error method is for this class, instead of having it made extremely 
-obvious.
+PHP itu sendiri cukup longgar dengan hal ini , dan panggilan untuk ` file_get_contents ( ) ` akan biasanya hanya mendapatkan Anda ` PALSU ` dan peringatan .
+Banyak kerangka PHP yang lebih tua seperti CodeIgniter hanya akan kembali palsu , log pesan ke log milik mereka dan mungkin
+membiarkan Anda menggunakan metode seperti ` $ this - > meng-upload - > get_error ( ) ` untuk melihat apa yang salah . Masalahnya di sini adalah bahwa Anda harus pergi
+mencari kesalahan dan memeriksa dokumentasi untuk melihat apa metode kesalahan adalah untuk kelas ini , bukan karena itu dibuat sangat
+jelas .
 
-Another problem is when classes automatically throw an error to the screen and exit the process. When you do this you 
-stop another developer from being able to dynamically handle that error. Exceptions should be thrown to make a developer
-aware of an error; they then can choose how to handle this. E.g.:
+Masalah lain adalah ketika kelas secara otomatis melempar kesalahan ke layar dan keluar dari proses. Ketika Anda melakukan ini, Anda
+menghentikan pengembang lain dari mampu secara dinamis menangani kesalahan itu . Pengecualian harus dibuang untuk membuat pengembang
+menyadari kesalahan ; mereka kemudian dapat memilih cara untuk menangani hal ini . mis :
 
 {% highlight php %}
 <?php
@@ -47,25 +47,25 @@ finally
 
 ### SPL Exceptions
 
-The generic `Exception` class provides very little debugging context for the developer; however, to remedy this,
-it is possible to create a specialized `Exception` type by sub-classing the generic `Exception` class:
+Generik `Exception` kelas menyediakan sangat sedikit konteks debugging untuk pengembang; Namun, untuk memperbaiki hal ini,
+adalah mungkin untuk menciptakan `Exception` jenis khusus oleh sub-klasifikasi generik `` Exception class:
 
 {% highlight php %}
 <?php
 class ValidationException extends Exception {}
 {% endhighlight %}
 
-This means you can add multiple catch blocks and handle different Exceptions differently. This can lead to 
-the creation of a <em>lot</em> of custom Exceptions, some of which could have been avoided using the SPL Exceptions 
-provided in the [SPL extension][splext]. 
+Ini berarti Anda dapat menambahkan beberapa blok catch dan menangani Pengecualian berbeda berbeda. Hal ini dapat menyebabkan
+penciptaan banyak <em> </ em> Pengecualian kustom, beberapa di antaranya bisa dihindari dengan menggunakan Pengecualian SPL
+disediakan dalam [SPL extension] [splext].
 
-If for example you use the `__call()` Magic Method and an invalid method is requested then instead of throwing a standard 
-Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadMethodCallException;`.
+Jika misalnya Anda menggunakan `__call ()` Metode Sihir dan metode yang tidak valid diminta maka bukannya melemparkan standar
+Exception yang tidak jelas, atau membuat Exception kustom hanya untuk itu, Anda hanya bisa `melempar BadMethodCallException baru;`.
 
-* [Read about Exceptions][exceptions]
-* [Read about SPL Exceptions][splexe]
-* [Nesting Exceptions In PHP][nesting-exceptions-in-php]
-* [Exception Best Practices in PHP 5.3][exception-best-practices53]
+* [Baca tentang Exceptions][exceptions]
+* [Baca tentang SPL Exceptions][splexe]
+* [Nesting Exceptions di PHP][nesting-exceptions-in-php]
+* [Exception Best Practices di PHP 5.3][exception-best-practices53]
 
 [exceptions]: http://php.net/manual/en/language.exceptions.php
 [splexe]: http://php.net/manual/en/spl.exceptions.php
