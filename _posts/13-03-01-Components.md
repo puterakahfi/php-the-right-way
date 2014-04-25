@@ -5,20 +5,20 @@ anchor: components
 
 ## Components {#components_title}
 
-As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing shared code. Various
-component repositories exist, the main two of which are:
+Seperti disebutkan di atas "Komponen" adalah pendekatan lain untuk tujuan bersama untuk menciptakan, mendistribusikan dan mengimplementasikan kode bersama. berbagai
+repositori komponen yang ada, dua utama yaitu:
 
-* [Packagist](/#composer_and_packagist)
-* [PEAR](/#pear)
+* [Packagist] (/ # composer_and_packagist)
+* [PEAR] (/ # pear)
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade 
-processes, and have been explained in more detail in the [Dependency Management] section.
+Kedua repositori ini memiliki alat baris perintah yang terkait dengan mereka untuk membantu instalasi dan upgrade
+proses, dan telah dijelaskan secara lebih rinci dalam [Manajemen Ketergantungan] bagian.
 
-There are also component-based frameworks and component-vendors that offer no framework at all. These projects provide 
-another source of packages which ideally have little to no dependencies on other packages, or specific frameworks.
+Ada juga kerangka kerja berbasis komponen dan komponen-vendor yang menawarkan tidak ada kerangka kerja sama sekali. Proyek-proyek ini memberikan
+sumber lain dari paket yang idealnya memiliki sedikit atau tidak ada ketergantungan pada paket lain, atau kerangka kerja tertentu.
 
-For example, you can use the [FuelPHP Validation package], without needing to use the FuelPHP framework 
-itself.
+Sebagai contoh, Anda dapat menggunakan [paket FuelPHP Validasi], tanpa perlu menggunakan kerangka FuelPHP
+itu sendiri.
 
   [Dependency Management]: /#dependency_management
   [FuelPHP Validation package]: https://github.com/fuelphp/validation
@@ -33,5 +33,5 @@ itself.
     * [Eloquent ORM](https://github.com/illuminate/database)
     * [Queue](https://github.com/illuminate/queue)
 
-_Laravel's [Illuminate components](https://github.com/illuminate) will become better decoupled from the Laravel framework.
-For now, only the components best decoupled from the Laravel framework are listed above._
+_Laravel's [Illuminate components](https://github.com/illuminate) akan menjadi lebih baik dipisahkan dari kerangka Laravel.
+Untuk saat ini, hanya komponen terbaik dipisahkan dari kerangka Laravel tercantum above._

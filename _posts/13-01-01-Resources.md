@@ -1,15 +1,16 @@
 ---
+title: Sumber-Sumber
 anchor: resources
 ---
 
-# Resources {#resources_title}
+# Sumber-Sumber {#resources_title}
 
-## From the Source
+## Sumber
 
 * [PHP Website](http://php.net/)
 * [PHP Documentation](http://php.net/docs.php)
 
-## People to Follow
+## Orang-Orang yang perlu di-Follow
 
 * [Rasmus Lerdorf](http://twitter.com/rasmus)
 * [Fabien Potencier](http://twitter.com/fabpot)

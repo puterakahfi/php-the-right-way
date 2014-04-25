@@ -5,20 +5,20 @@ anchor: frameworks
 
 ## Frameworks {#frameworks_title}
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+Daripada menemukan kembali roda , banyak pengembang PHP menggunakan kerangka kerja untuk membangun aplikasi web . Kerangka abstrak pergi banyak keprihatinan tingkat rendah dan memberikan membantu, mudah digunakan antarmuka untuk menyelesaikan tugas-tugas umum .
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a framework then there are three main types available:
+Anda tidak perlu menggunakan kerangka kerja untuk setiap proyek . PHP kadang-kadang polos adalah cara yang tepat untuk pergi , tetapi jika Anda memerlukan kerangka maka ada tiga jenis utama yang tersedia :
 
 * Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
+* Full- Stack Frameworks
+* Komponen Kerangka
 
-Micro-frameworks are essentially a  wrapper to route a HTTP request to a callback, controller, method, etc as quickly as possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the like. They are prominently used 
-to build remote HTTP services.
+Micro - kerangka dasarnya pembungkus untuk rute permintaan HTTP ke callback , controller, metode , dll secepat mungkin , dan kadang-kadang datang dengan perpustakaan beberapa tambahan untuk membantu pembangunan seperti pembungkus database dasar dan sejenisnya . Mereka jelas digunakan
+untuk membangun layanan HTTP terpencil .
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework and these are known Full-Stack 
-Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+Banyak kerangka menambahkan sejumlah besar fitur di atas dari apa yang tersedia dalam mikro - kerangka dan ini dikenal Full- Stack
+Frameworks . Ini sering datang dibundel dengan ORMs , paket Authentication , dll
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based frameworks can be used together to make a micro- or full-stack framework.
+Kerangka kerja berbasis komponen adalah koleksi khusus dan single- tujuan perpustakaan . Kerangka berbasis komponen yang berbeda dapat digunakan bersama-sama untuk membuat mikro atau kerangka kerja full- stack.
 
-* [Popular PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
+* [Popular PHP Frameworks ] ( https://github.com/codeguy/php-the-right-way/wiki/Frameworks )
