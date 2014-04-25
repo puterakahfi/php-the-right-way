@@ -1,65 +1,66 @@
 ---
+title: PHP dan UTF-8
 isChild: true
 anchor: php_and_utf8
 ---
 
-## PHP and UTF-8 {#php_and_utf8_title}
+## PHP dan UTF-8 {#php_and_utf8_title}
 
-_This section was originally written by [Alex Cabal](https://alexcabal.com/) over at 
-[PHP Best Practices](https://phpbestpractices.org/#utf-8) and has now been shared here_.
+Bagian _this awalnya ditulis oleh [Alex Cabal] (https://alexcabal.com/) ke arah
+[PHP Praktik Terbaik] (https://phpbestpractices.org/ # utf-8) dan kini telah bersama here_.
 
-### There's no one-liner. Be careful, detailed, and consistent.
+### Tidak ada satu baris. Hati-hati, detail, dan konsisten.
 
-Right now PHP does not support Unicode at a low level. There are ways to ensure that UTF-8 strings are processed OK, 
-but it's not easy, and it requires digging in to almost all levels of the web app, from HTML to SQL to PHP. We'll aim 
-for a brief, practical summary.
+Saat ini PHP tidak mendukung Unicode pada tingkat yang rendah. Ada beberapa cara untuk memastikan bahwa UTF-8 string diproses OK,
+tapi itu tidak mudah, dan membutuhkan menggali ke hampir semua tingkat aplikasi web, dari HTML ke SQL ke PHP. Kami akan bertujuan
+untuk singkat, ringkasan praktis.
 
-### UTF-8 at the PHP level
+### UTF-8 di level PHP
 
-The basic string operations, like concatenating two strings and assigning strings to variables, don't need anything 
-special for UTF-8. However most string functions, like `strpos()` and `strlen()`, do need special consideration. These 
-functions often have an `mb_*` counterpart: for example, `mb_strpos()` and `mb_strlen()`. Together, these counterpart 
-functions are called the Multibyte String Functions. The multibyte string functions are specifically designed to 
-operate on Unicode strings.
+Operasi string dasar, seperti concatenating dua string dan menetapkan string ke variabel, tidak perlu apa-apa
+khusus untuk UTF-8. Namun sebagian besar fungsi string, seperti `strpos ()` dan `strlen ()`, perlu pertimbangan khusus. ini
+fungsi sering memiliki mitra `mb_ *`: misalnya, `mb_strpos ()` dan `mb_strlen ()`. Bersama-sama, mitra ini
+fungsi disebut Fungsi multibita String. Fungsi multibyte string yang secara khusus dirancang untuk
+beroperasi pada string Unicode.
 
-You must use the `mb_*` functions whenever you operate on a Unicode string. For example, if you use `substr()` on a 
-UTF-8 string, there's a good chance the result will include some garbled half-characters. The correct function to use 
-would be the multibyte counterpart, `mb_substr()`.
+Anda harus menggunakan `mb_ *` fungsi setiap kali Anda beroperasi pada string Unicode. Sebagai contoh, jika Anda menggunakan `substr ()` pada
+UTF-8 string, ada kesempatan baik hasilnya akan mencakup beberapa kacau setengah karakter. Fungsi yang benar untuk menggunakan
+akan menjadi mitra multibyte, `mb_substr ()`.
 
-The hard part is remembering to use the `mb_*` functions at all times. If you forget even just once, your Unicode 
-string has a chance of being garbled during further processing.
+Bagian yang sulit adalah mengingat untuk menggunakan `mb_ *` fungsi setiap saat. Jika Anda lupa bahkan hanya sekali, Unicode Anda
+string yang memiliki kesempatan menjadi kacau selama pemrosesan lebih lanjut.
 
-Not all string functions have an `mb_*` counterpart. If there isn't one for what you want to do, then you might be out 
-of luck.
+Tidak semua fungsi string memiliki mitra `mb_ *`. Jika tidak ada satu untuk apa yang ingin Anda lakukan, maka Anda mungkin akan keluar
+keberuntungan.
 
-Additionally, you should use the `mb_internal_encoding()` function at the top of every PHP script you write (or at the 
-top of your global include script), and the `mb_http_output()` function right after it if your script is outputting to 
-a browser. Explicitly defining the encoding of your strings in every script will save you a lot of headaches down the 
-road.
+Selain itu, Anda harus menggunakan `mb_internal_encoding ()` fungsi di bagian atas setiap script PHP Anda menulis (atau di
+atas global Anda termasuk script), dan `mb_http_output ()` fungsi tepat setelah itu jika skrip Anda keluaran untuk
+browser. Secara eksplisit mendefinisikan pengkodean string Anda dalam setiap naskah akan menghemat banyak sakit kepala bawah
+jalan.
 
-Finally, many PHP functions that operate on strings have an optional parameter letting you specify the character 
-encoding. You should always explicitly indicate UTF-8 when given the option. For example, `htmlentities()` has an 
-option for character encoding, and you should always specify UTF-8 if dealing with such strings.
+Akhirnya, banyak fungsi PHP yang beroperasi pada string memiliki parameter opsional membiarkan Anda menentukan karakter
+encoding. Anda harus selalu secara eksplisit menunjukkan UTF-8 ketika diberi pilihan. Sebagai contoh, `htmlentities ()` memiliki
+pilihan untuk encoding karakter, dan Anda harus selalu menentukan UTF-8 jika berurusan dengan string tersebut.
 
-Note that as of PHP 5.4.0, UTF-8 is the default encoding for `htmlentities()` and `htmlspecialchars()`.
+Perhatikan bahwa pada PHP 5.4.0, UTF-8 adalah encoding default untuk `htmlentities ()` dan `htmlspecialchars ()`.
 
 
-### UTF-8 at the Database level
+### UTF-8 di level Database
 
-If your PHP script accesses MySQL, there's a chance your strings could be stored as non-UTF-8 strings in the database 
-even if you follow all of the precautions above.
+Jika script PHP Anda mengakses MySQL, ada kemungkinan string Anda dapat disimpan sebagai non-UTF-8 string dalam database
+bahkan jika Anda mengikuti semua tindakan pencegahan di atas.
 
-To make sure your strings go from PHP to MySQL as UTF-8, make sure your database and tables are all set to the 
-`utf8mb4` character set and collation, and that you use the `utf8mb4` character set in the PDO connection string. See 
-example code below. This is _critically important_.
+Untuk memastikan string Anda pergi dari PHP ke MySQL sebagai UTF-8, pastikan database dan tabel semua diatur ke
+`utf8mb4` set karakter dan pemeriksaan, dan bahwa Anda menggunakan `utf8mb4` set karakter di PDO connection string. lihat
+contoh kode di bawah ini. Ini _critically important_.
 
-Note that you must use the `utf8mb4` character set for complete UTF-8 support, not the `utf8` character set! See 
-Further Reading for why.
+Perhatikan bahwa Anda harus menggunakan `utf8mb4` character set untuk dukungan UTF-8 selesai, bukan `utf8` set karakter! lihat
+Bacaan lebih lanjut mengapa.
 
-### UTF-8 at the browser level
+### UTF-8 di level Web Browser
 
-Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser. In your HTML, 
-include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag. 
+Gunakan `mb_http_output ()` fungsi untuk memastikan bahwa script PHP Anda output UTF-8 string ke browser Anda. Dalam HTML Anda,
+termasuk [charset `<meta>` tag] (http://htmlpurifier.org/docs/enduser-utf8.html) di `<head>` tag halaman Anda.
 
 {% highlight php %}
 <?php
@@ -119,7 +120,7 @@ $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 </html>
 {% endhighlight %}
 
-### Further reading
+### Bacaan Lebih Lanjut
 
 * [PHP Manual: String Operations](http://php.net/manual/en/language.operators.string.php)
 * [PHP Manual: String Functions](http://php.net/manual/en/ref.strings.php)

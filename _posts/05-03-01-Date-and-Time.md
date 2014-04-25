@@ -1,17 +1,18 @@
 ---
+title: Tanggal dan Waktu
 isChild: true
 anchor: date_and_time
 ---
 
-## Date and Time {#date_and_time_title}
+## Tanggal dan Waktu {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There are
-many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to most
-common uses. It can handle time zones, but that is outside this short introduction.
+PHP memiliki kelas bernama DateTime untuk membantu Anda ketika membaca, menulis, atau menghitung membandingkan dengan tanggal dan waktu. ada
+banyak tanggal dan waktu fungsi dalam PHP terkait selain DateTime, tetapi menyediakan antarmuka yang bagus berorientasi obyek untuk sebagian
+penggunaan umum. Ia bisa menangani zona waktu, tapi itu di luar pengenalan singkat ini.
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+Untuk mulai bekerja dengan DateTime, mengubah tanggal dan waktu baku string untuk obyek dengan `createFromFormat ()` metode pabrik
+atau melakukan `baru \ DateTime` untuk mendapatkan tanggal dan waktu. Gunakan format () metode `` untuk mengkonversi DateTime kembali ke string untuk output.
+
 {% highlight php %}
 <?php
 $raw = '22. 11. 1968';
@@ -20,10 +21,11 @@ $start = \DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference use
-the `diff()` method. It will return new DateInterval, which is super easy to display.
+Menghitung dengan DateTime adalah mungkin dengan kelas DateInterval. DateTime memiliki metode seperti `add ()` dan `sub ()` yang
+mengambil DateInterval sebagai argumen. Jangan menulis kode yang mengharapkan jumlah yang sama detik setiap hari, baik siang hari
+tabungan dan zona waktu perubahan akan mematahkan asumsi tersebut. Gunakan interval tanggal gantinya. Untuk menghitung tanggal penggunaan perbedaan
+yang `diff ()` metode. Ini akan mengembalikan DateInterval baru, yang super mudah untuk menampilkan.
+
 {% highlight php %}
 <?php
 // create a copy of $start and add one month and 6 days
@@ -43,8 +45,9 @@ if ($start < $end) {
 }
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+Salah satu contoh terakhir untuk menunjukkan kelas DatePeriod. Hal ini digunakan untuk beralih di atas berulang peristiwa. Hal ini dapat mengambil dua Objek DateTime, awal dan akhir, dan interval yang akan mengembalikan semua peristiwa di antara.
+
+
 {% highlight php %}
 <?php
 // output all thursdays between $start and $end
@@ -56,8 +59,8 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [Baca tentang DateTime][datetime]
+* [Baca tentang DateTime formatting][dateformat] (tanggal diterima opsi format string)
 
 [datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php

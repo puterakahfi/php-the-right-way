@@ -1,13 +1,14 @@
 ---
+title: Dasar
 isChild: true
 anchor: the_basics
 ---
 
-## The Basics {#the_basics_title}
+## Dasar {#the_basics_title}
 
-PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently. 
-However while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor 
-of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the 
-basic coding practices within PHP.
+PHP adalah bahasa yang luas yang memungkinkan coders dari semua tingkat kemampuan untuk menghasilkan kode tidak hanya cepat, tapi efisien.
+Namun selagi maju melalui bahasa, kita sering melupakan dasar-dasar yang pertama kita pelajari (atau diabaikan) dalam mendukung
+pemotongan pendek dan / atau kebiasaan buruk. Untuk membantu memerangi masalah umum ini, bagian ini ditujukan untuk mengingatkan coders dari
+praktek coding dasar dalam PHP.
 
-* Continue reading on [The Basics](/pages/The-Basics.html)
+* Lanjutkan membaca di [Dasar](/pages/The-Basics.html)
