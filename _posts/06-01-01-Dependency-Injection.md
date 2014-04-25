@@ -5,10 +5,10 @@ anchor: dependency_injection
 
 # Dependency Injection {#dependency_injection_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
+Dari [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
 
 > Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it 
 > possible to change them, whether at run-time or compile-time.
 
-This quote makes the concept sound much more complicated than it actually is. Dependency Injection is providing a component 
-with its dependencies either through constructor injection, method calls or the setting of properties. It is that simple.
+Kutipan ini membuat konsep terdengar jauh lebih rumit daripada yang sebenarnya. Injeksi Ketergantungan menyediakan komponen
+dengan dependensinya baik melalui injeksi konstruktor, panggilan metode atau pengaturan properti. Hal ini sederhana itu.

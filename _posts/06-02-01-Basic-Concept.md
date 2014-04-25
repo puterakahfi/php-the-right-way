@@ -1,15 +1,16 @@
 ---
+title: Konsep Dasar
 isChild: true
 anchor: basic_concept
 ---
 
-## Basic Concept {#basic_concept_title}
+## Konsep Dasar {#basic_concept_title}
 
-We can demonstrate the concept with a simple, yet naive example.
+Kita dapat menunjukkan konsep dengan contoh sederhana, namun naif.
 
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the
-adapter in the constructor and create a hard dependency. This makes testing difficult and means the `Database` class is
-very tightly coupled to the adapter.
+Di sini kita memiliki `database` kelas yang memerlukan adaptor untuk berbicara dengan database. Kami instantiate
+adaptor dalam konstruktor dan menciptakan ketergantungan keras. Hal ini membuat pengujian sulit dan berarti `database` kelas
+sangat erat digabungkan ke adaptor.
 
 {% highlight php %}
 <?php
@@ -28,7 +29,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-This code can be refactored to use Dependency Injection and therefore loosen the dependency.
+Kode ini dapat refactored untuk menggunakan Dependency Injection dan karenanya melonggarkan ketergantungan.
 
 {% highlight php %}
 <?php
@@ -47,6 +48,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than it creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we could
-set it directly.
+Sekarang kita memberikan `database` class ketergantungan daripada itu menciptakan itu sendiri. Kita bahkan bisa menciptakan sebuah metode
+yang akan menerima argumen dari ketergantungan dan mengatur seperti itu, atau jika `$ adaptor` properti adalah `publik` kita bisa
+mengaturnya secara langsung.

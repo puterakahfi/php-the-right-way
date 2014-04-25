@@ -1,31 +1,31 @@
 ---
+title: Masalah Kompleks
 isChild: true
 anchor: complex_problem
 ---
 
-## Complex Problem {#complex_problem_title}
+## Masalah Kompleks {#complex_problem_title}
 
-If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or *"Dependency Inversion Principle"*.
-These are the complex problems that Dependency Injection solves.
+Jika Anda pernah membaca tentang Dependency Injection maka Anda mungkin telah melihat istilah * "Inversion of Control" * atau * "Ketergantungan Inversi Prinsip" *.
+Ini adalah masalah kompleks yang Dependency Injection memecahkan.
 
 ### Inversion of Control
 
-Inversion of Control is as it says, "inverting the control" of a system by keeping organisational control entirely separate from our objects.
-In terms of Dependency Injection, this means loosening our dependencies by controlling and instantiating them elsewhere in the system.
+Inversion of Control adalah seperti yang dikatakan, "pembalik kontrol" dari suatu sistem dengan menjaga kontrol organisasi yang sama sekali terpisah dari benda kami.
+Dalam hal Dependency Injection, ini berarti melonggarkan ketergantungan kita dengan mengendalikan dan instantiating mereka di tempat lain dalam sistem.
 
-For years, PHP frameworks have been achieving Inversion of Control, however, the question became, which part of control
-are you inverting, and where to? For example, MVC frameworks would generally provide a super object or base controller that other
-controllers must extend to gain access to its dependencies. This **is** Inversion of Control, however, instead of loosening
-dependencies, this method simply moved them.
+Selama bertahun-tahun, kerangka kerja PHP telah mencapai Inversion of Control, namun, pertanyaannya menjadi, bagian mana dari kontrol
+Anda pembalik, dan di mana? Sebagai contoh, kerangka kerja MVC umumnya akan memberikan objek atau basis pengendali super yang lain
+pengendali harus memperpanjang untuk mendapatkan akses ke dependensinya. Ini ** adalah ** Inversion of Control, namun, bukannya melonggarkan
+dependensi, metode ini hanya bergerak mereka.
 
-Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we need them,
-without the need for any hard coded dependencies at all.
+Injeksi Ketergantungan memungkinkan kita untuk lebih elegan memecahkan masalah ini dengan hanya menyuntikkan dependensi yang kita butuhkan, ketika kita membutuhkan mereka,
+tanpa perlu untuk setiap dependensi kode keras sama sekali.
 
 ### Dependency Inversion Principle
 
-Dependency Inversion Principle is the "D" in the S.O.L.I.D set of object oriented design principles that states one should
-*"Depend on Abstractions. Do not depend on concretions."*. Put simply, this means our dependencies should be interfaces/contracts or abstract
-classes rather than concrete implementations. We can easily refactor the above example to follow this principle.
+Ketergantungan Inversi Prinsip adalah "D" di set SOLID prinsip-prinsip desain berorientasi objek yang menyatakan orang harus
+* "Tergantung pada Abstractions. Jangan tergantung pada konkret." *. Sederhananya, ini berarti ketergantungan kita harus interface / kontrak atau abstrak kelas daripada implementasi konkret. Kita dapat dengan mudah refactor contoh di atas untuk mengikuti prinsip ini.
 
 {% highlight php %}
 <?php
@@ -46,12 +46,11 @@ interface AdapterInterface {}
 class MysqlAdapter implements AdapterInterface {}
 {% endhighlight %}
 
-There are several benefits to the `Database` class now depending on an interface rather than a concretion.
+Ada beberapa manfaat bagi `database` class sekarang tergantung pada interface daripada concretion a.
 
-Consider that you are working in a team and the adapter is being worked on by a colleague. In our first example, we would have
-to wait for said colleague to finish the adapter before we could properly mock it for our unit tests. Now that the dependency
-is an interface/contract we can happily mock that interface knowing that our colleague will build the adapter based on that contract.
+Pertimbangkan bahwa Anda bekerja dalam tim dan adaptor sedang dikerjakan oleh seorang rekan. Dalam contoh pertama kita, kita akan memiliki
+untuk menunggu rekan dikatakan menyelesaikan adaptor sebelum kita benar bisa mengejek itu untuk tes unit kami. Sekarang bahwa ketergantungan
+adalah sebuah antarmuka / kontrak kita bisa bahagia mengejek antarmuka yang mengetahui bahwa rekan kami akan membangun adaptor berdasarkan kontrak itu.
 
-An even bigger benefit to this method is that our code is now much more scalable. If a year down the line we decide that we
-want to migrate to a different type of database, we can write an adapter that implements the original interface and inject that instead,
-no more refactoring would be required as we can ensure that the adapter follows the contract set by the interface.
+Manfaat yang lebih besar untuk metode ini adalah bahwa kode kita sekarang jauh lebih scalable. Jika tahun ke depan kita memutuskan bahwa kita
+ingin bermigrasi ke berbagai jenis database, kita dapat menulis sebuah adaptor yang mengimplementasikan antarmuka asli dan menyuntikkan bahwa alih-alih, tidak lebih refactoring akan diperlukan seperti yang kita dapat memastikan bahwa adaptor mengikuti kontrak yang ditetapkan oleh antarmuka.

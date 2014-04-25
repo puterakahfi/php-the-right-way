@@ -5,11 +5,11 @@ anchor: containers
 
 ## Containers {#containers_title}
 
-The first thing you should understand about Dependency Injection Containers is that they are not the same thing as Dependency
-Injection. A container is a convenience utility that helps us implement Dependency Injection, however, they can be and often
-are misused to implement an anti-pattern, Service Location. Injecting a DI container as a Service Locator in to your classes arguably
-creates a harder dependency on the container than the dependency you are replacing. It also makes your code much less transparent
-and ultimately harder to test.
+Hal pertama yang harus Anda mengerti tentang Dependency Injection Wadah adalah bahwa mereka tidak sama dengan Dependency
+Injection. Sebuah wadah adalah utilitas kenyamanan yang membantu kita menerapkan Dependency Injection, bagaimanapun, mereka dapat dan sering
+disalahgunakan untuk menerapkan anti-pola, Layanan Lokasi. Penyuntikan wadah DI sebagai Layanan Locator ke kelas Anda dibilang
+menciptakan ketergantungan keras pada wadah dari ketergantungan yang akan diganti. Hal ini juga membuat kode Anda jauh lebih transparan
+dan akhirnya sulit untuk menguji.
 
-Most modern frameworks have their own Dependency Injection Container that allows you to wire your dependencies together through configuration.
-What this means in practice is that you can write application code that is as clean and de-coupled as the framework it is built on.
+Kebanyakan kerangka modern memiliki Dependency Injection Kontainer mereka sendiri yang memungkinkan Anda untuk kawat dependensi Anda bersama-sama melalui konfigurasi.
+Apa ini berarti dalam prakteknya adalah bahwa Anda dapat menulis kode aplikasi yang bersih dan de-digabungkan sebagai kerangka itu dibangun di atas.
