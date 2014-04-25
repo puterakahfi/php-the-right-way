@@ -1,52 +1,46 @@
 ---
+title: Paradigma Pemrograman
 isChild: true
 anchor: programming_paradigms
 ---
 
-## Programming Paradigms {#programming_paradigms_title}
+## Paradigma Pemrograman {#programming_paradigms_title}
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
-the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 
-(2009), and traits in PHP 5.4 (2012). 
+PHP adalah fleksibel, bahasa dinamis yang mendukung berbagai teknik pemrograman. Hal ini telah berkembang secara dramatis selama bertahun-tahun, terutama menambahkan model solid berorientasi objek di PHP 5.0 (2004), fungsi anonim dan ruang nama di PHP 5.3 (2009), dan sifat-sifat di PHP 5.4 (2012).
 
-### Object-oriented Programming
+### Pemrograman Berorientasi Object
 
-PHP has a very complete set of object-oriented programming features including support for classes, abstract classes,
-interfaces, inheritance, constructors, cloning, exceptions, and more.
+PHP memiliki satu set yang sangat lengkap fitur pemrograman berorientasi obyek termasuk dukungan untuk kelas, kelas abstrak, interface, pewarisan, konstruktor, kloning, pengecualian, dan banyak lagi.
 
-* [Read about Object-oriented PHP][oop]
-* [Read about Traits][traits]
+* [Baca tentang Pemrograman Berorientasi Object pada PHP][oop]
+* [Baca tentang Traits][traits]
 
-### Functional Programming
+### Pemrograman Fungsional
 
-PHP supports first-class function, meaning that a function can be assigned to a variable. Both user-defined and built-in
-functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
-functions (feature called Higher-order functions) and function can return other functions.
+PHP mendukung fungsi kelas-pertama, yang berarti bahwa fungsi dapat ditugaskan ke variabel. Kedua user-defined dan built-in
+fungsi dapat direferensikan oleh variabel dan dipanggil secara dinamis. Fungsi dapat disahkan sebagai argumen untuk lainnya
+fungsi (fitur yang disebut fungsi-order yang lebih tinggi) dan fungsi dapat kembali fungsi lainnya.
 
-Recursion, a feature that allows a function to call itself is supported by the language, but most of the PHP code focus
-on iteration.
+Rekursi, sebuah fitur yang memungkinkan fungsi untuk menyebut dirinya didukung oleh bahasa, tetapi sebagian besar fokus kode PHP pada iterasi.
 
-New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+Fungsi anonim baru (dengan dukungan untuk penutupan) yang hadir sejak PHP 5.3 (2009).
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
-can be used interchangeably with anonymous functions in almost all cases.
+PHP 5.4 menambahkan kemampuan untuk mengikat penutupan untuk lingkup obyek dan juga meningkatkan dukungan untuk callables sehingga mereka dapat digunakan secara bergantian dengan fungsi anonim di hampir semua kasus.
 
-* Continue reading on [Functional Programming in PHP](/pages/Functional-Programming.html)
-* [Read about Anonymous Functions][anonymous-functions]
-* [Read about the Closure class][closure-class]
-* [More details in the Closures RFC][closures-rfc]
-* [Read about Callables][callables]
-* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+* Lanjutkan membaca [Pemrograman Fungsional pada PHP](/pages/Functional-Programming.html)
+* [Baca tentang Anonymous Functions][anonymous-functions]
+* [Baca tentang the Closure class][closure-class]
+* [Baca lebih lanjut di the Closures RFC][closures-rfc]
+* [Baca tentang Callables][callables]
+* [Baca tentang dynamically invoking functions dengan `call_user_func_array`][call-user-func-array]
 
-### Meta Programming
+### Pemrograman Meta
 
-PHP supports various forms of meta-programming through mechanisms like the Reflection API and Magic Methods. There are
-many Magic Methods available like `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. that allow
-developers to hook into class behavior. Ruby developers often say that PHP is lacking `method_missing`, but it is
-available as `__call()` and `__callStatic()`.
+PHP mendukung berbagai bentuk meta-pemrograman melalui mekanisme seperti API Refleksi dan Metode Sihir. ada
+Metode Sihir banyak tersedia seperti `__get ()`, `__set ()`, `__clone ()`, `__toString ()`, `__invoke ()`, dll yang memungkinkan pengembang untuk menghubungkan ke perilaku kelas. Pengembang Ruby sering mengatakan bahwa PHP kurang `method_missing`, tetapi tersedia sebagai `__call ()` dan `__callStatic ()`.
 
-* [Read about Magic Methods][magic-methods]
-* [Read about Reflection][reflection]
+* [Baca tentang Magic Methods][magic-methods]
+* [Baca tentang Reflection][reflection]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
 [overloading]: http://php.net/manual/en/language.oop5.overloading.php

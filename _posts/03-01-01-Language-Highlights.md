@@ -1,5 +1,6 @@
 ---
+title: Gambaran Bahasa PHP
 anchor: language_highlights
 ---
 
-# Language Highlights {#language_highlights_title}
+# Gambaran Bahasa PHP {#language_highlights_title}
