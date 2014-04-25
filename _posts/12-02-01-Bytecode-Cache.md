@@ -5,18 +5,18 @@ anchor: bytecode_cache
 
 ## Bytecode Cache {#bytecode_cache_title}
 
-When a PHP file is executed, under the hood it is first compiled to bytecode (also known as opcode) and, only then, the bytecode is executed.
-If a PHP file is not modified, the bytecode will always be the same. This means that the compilation step is a waste of CPU resources.
+Bila file PHP dijalankan , di bawah tenda itu pertama kali dikompilasi untuk bytecode ( juga dikenal sebagai opcode ) dan , hanya kemudian , bytecode dijalankan .
+Jika sebuah file PHP tidak diubah , bytecode akan selalu sama . Ini berarti bahwa langkah kompilasi adalah pemborosan sumber daya CPU .
 
-This is where Bytecode cache comes in. It prevents redundant compilation by storing bytecode in memory and reusing it on successive calls.
-Setting up bytecode cache is a matter of minutes, and your application will speed up significantly. There's really no reason not to use it.
+Di sinilah Bytecode Cache masuk Ini mencegah kompilasi berlebihan dengan menyimpan bytecode dalam memori dan menggunakan kembali pada panggilan berturut-turut .
+Menyiapkan bytecode cache hitungan menit , dan aplikasi Anda akan mempercepat secara signifikan . Ada benar-benar ada alasan untuk tidak menggunakannya .
 
-As of PHP 5.5, there is a built-in bytecode cache called [OPcache](http://php.net/manual/en/book.opcache.php). This is
-also available for earlier versions.
+Pada PHP 5.5 , ada cache bytecode built -in yang disebut [ OPcache ] ( http://php.net/manual/en/book.opcache.php ) . ini adalah
+juga tersedia untuk versi sebelumnya .
 
-Other popular bytecodes caches are:
+Lain populer bytecode cache adalah :
 
-* [APC](http://php.net/manual/en/book.apc.php) (PHP 5.4 and earlier)
-* [XCache](http://xcache.lighttpd.net/)
-* [Zend Optimizer+](http://www.zend.com/products/server/) (part of Zend Server package)
-* [WinCache](http://www.iis.net/download/wincacheforphp) (extension for MS Windows Server)
+* [ APC ] ( http://php.net/manual/en/book.apc.php ) ( PHP 5.4 dan sebelumnya )
+* [ XCache ] ( http://xcache.lighttpd.net/ )
+* [ Zend Optimizer + ] ( http://www.zend.com/products/server/ ) ( bagian dari paket Server Zend )
+* [ WinCache ] ( http://www.iis.net/download/wincacheforphp ) ( ekstensi untuk MS Windows Server )
