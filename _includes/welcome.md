@@ -1,6 +1,6 @@
 # Pendahuluan
 
-Banyak tutorial kuno di Web menyesatkan pengembang PHP yang baru bergabung.
+Banyak tutorial kuno menyesatkan pengembang PHP yang baru bergabung.
 Mengajarkan cara yang buruk dan menyebarkan contoh kode yang tidak aman.
 PHP: The Right Way adalah referensi yang mengikuti standar pengkodean modern,
 ditujukan bagi para pengembang PHP baru.
