@@ -1,8 +1,9 @@
 # Pendahuluan
 
-Ada banyak tutorial kuno di Web yang menyesatkan pengembang PHP yang baru bergabung, 
-mengajarkan cara-cara yang buruk dan tidak aman. PHP: The Right Way adalah referensi yang mengikuti
-standar pengkodean modern, ditujukan bagi para pengembang PHP baru.
+Banyak tutorial kuno di Web menyesatkan pengembang PHP yang baru bergabung.
+Mengajarkan cara yang buruk dan menyebarkan contoh kode yang tidak aman.
+PHP: The Right Way adalah referensi yang mengikuti standar pengkodean modern,
+ditujukan bagi para pengembang PHP baru.
 
 Sebetulnya, tidak ada satu cara autentik untuk menggunakan PHP. Website ini bertujuan untuk memperkenalkan 
 kepada pengembang PHP baru beberapa topik yang mungkin tidak mereka temukan selama ini.
