@@ -6,10 +6,10 @@ PHP: The Right Way adalah referensi yang mengikuti standar pengkodean modern,
 ditujukan bagi para pengembang PHP baru.
 
 Sebetulnya, tidak ada satu cara autentik untuk menggunakan PHP. Website ini bertujuan untuk memperkenalkan 
-kepada pengembang PHP baru beberapa topik yang mungkin tidak mereka temukan selama ini.
+pengembang PHP baru tentang topik-topik yang tidak mereka temukan selama ini.
 
-Untuk pengembang berpengalaman, tulisan ini dapat memberikan ide-ide segar tentang topik yang telah
-mereka lakukan selama ini tanpa mengikuti perkembangan. Website ini tidak akan membertahu Anda
+Bagi pengembang berpengalaman, tulisan ini dapat memberikan ide-ide segar tentang topik yang telah
+mereka lakukan selama ini tetapi tanpa mengikuti perkembangan. Website ini tidak akan memberitahu Anda
 alat-alat yang digunakan, tapi akan menawarkan saran dan pilihan solusi.
 
 Dokumen ini akan terus diperbarui dengan informasi dan contoh-contoh terbaru sehingga akan terus bermanfaat.
