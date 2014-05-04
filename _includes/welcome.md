@@ -1,23 +1,19 @@
 # Pendahuluan
 
-Ada banyak informasi usang di Web yang menyesatkan pengguna PHP baru, menyebarkan 
-cara-cara buruk dan kode yang tidak aman. PHP: The Right Way adalah referensi yang
-mudah diikuti untuk PHP yang mengikuti standar pengkodean modern. Link ke tutorial 
-otoritatif di Web dan apa yang dianggap kontributor sebagai cara terbaik pada saat ini.
+Ada banyak tutorial kuno di Web yang menyesatkan pengembang PHP yang baru bergabung, 
+mengajarkan cara-cara yang buruk dan tidak aman. PHP: The Right Way adalah referensi yang mengikuti
+standar pengkodean modern, ditujukan bagi para pengembang PHP baru.
 
-Tidak ada cara autentik untuk menggunakan PHP. Website ini bertujuan untuk memperkenalkan 
-pengembang PHP baru untuk beberapa topik yang mereka mungkin tidak terlambat menemukan, 
-dan bertujuan untuk memberikan orang berpengalaman beberapa ide-ide segar pada 
-topik-topik yang telah mereka lakukan selama bertahun-tahun tanpa pernah mempertimbangkan kembali. 
-Website ini juga tidak akan memberitahu Anda alat-alat yang digunakan, tapi malah 
-menawarkan saran untuk beberapa pilihan, bila mungkin menjelaskan perbedaan dalam pendekatan 
-dan menggunakan kasus.
+Sebetulnya, tidak ada satu cara autentik untuk menggunakan PHP. Website ini bertujuan untuk memperkenalkan 
+kepada pengembang PHP baru beberapa topik yang mungkin tidak mereka temukan selama ini.
 
+Untuk pengembang berpengalaman, tulisan ini dapat memberikan ide-ide segar tentang topik yang telah
+mereka lakukan selama ini tanpa mengikuti perkembangan. Website ini tidak akan membertahu Anda
+alat-alat yang digunakan, tapi akan menawarkan saran dan pilihan solusi.
 
-Ini adalah dokumen hidup dan akan terus diperbarui dengan informasi dan contoh-contoh 
-lebih bermanfaat jika telah tersedia.
+Dokumen ini akan terus diperbarui dengan informasi dan contoh-contoh terbaru sehingga akan terus bermanfaat.
 
-## Terjemahan
+## Terjemahan di Bahasa Lain
 
 _PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 
@@ -39,12 +35,12 @@ _PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 
 ## Bagaimana berkontribusi?
 
-Bantulah website ini untuk menjadi referensi terbaik bagi progammer PHP baru! [Contribute on GitHub][1]
+Bantulah website ini untuk menjadi referensi terbaik bagi para progammer PHP baru! [berkontribusi di GitHub][1]
 
 ## Sebarkan
 
-_PHP: The Right Way_ memiliki gambar banner yang bisa dipasang di website Anda. Tunjukkan kepedulian anda dan
-tunjukkan kepada programmer PHP baru untuk mengetahui di mana tempat mendapatkan informasi yang bagus.
+_PHP: The Right Way_ memiliki gambar _banner_ yang bisa dipasang di website Anda. Tunjukkan kepedulian anda
+kepada programmer PHP baru untuk mengetahui di mana tempat mendapatkan informasi yang bagus.
 
 [Gambar Banner][2]
 
