@@ -1,4 +1,4 @@
-# Selamat Datang
+# Pendahuluan
 
 Ada banyak informasi usang di Web yang menyesatkan pengguna PHP baru, menyebarkan 
 cara-cara buruk dan kode yang tidak aman. PHP: The Right Way adalah referensi yang
@@ -25,6 +25,7 @@ _PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 * [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
 * [Japanese](http://ja.phptherightway.com)
 * [Korean](http://wafe.github.io/php-the-right-way/)
+* [Indonesian](http://id.phptherightway.com)
 * [Italian](http://it.phptherightway.com/)
 * [Polish](http://pl.phptherightway.com/)
 * [Portuguese](http://br.phptherightway.com/)
@@ -35,7 +36,6 @@ _PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 * [German](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
-* [Indonesian](http://andylibrian.github.io/php-the-right-way)
 
 ## Bagaimana berkontribusi?
 
