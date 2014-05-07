@@ -1,9 +1,9 @@
 # Pendahuluan
 
-Di internet, ada banyak tutorial kuno yang menyesatkan _programmer_ PHP.
+Di internet, tersebar banyak sekali tutorial kuno yang menyesatkan _programmer_ PHP.
 Mengajarkan cara buruk dan menyebarkan contoh kode yang tidak aman.
 ___PHP: The Right Way___ adalah referensi yang mengikuti standar pengkodean modern,
-ditujukan bagi para pengembang PHP baru.
+ditujukan bagi para pengembang PHP baru agar dapat membangun software berkualitas menggunakan PHP.
 
 Sebetulnya, tidak ada satu cara autentik untuk menggunakan PHP. Namun, website ini
 bermaksud untuk memperkenalkan _programmer_ PHP baru tentang hal-hal yang tidak mereka temukan selama ini.
