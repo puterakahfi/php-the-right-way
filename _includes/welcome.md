@@ -3,10 +3,10 @@
 Di internet, tersebar banyak sekali tutorial kuno yang menyesatkan _programmer_ PHP.
 Mengajarkan cara buruk dan menyebarkan contoh kode yang tidak aman.
 ___PHP: The Right Way___ adalah referensi yang mengikuti standar pengkodean modern,
-ditujukan bagi para pengembang PHP baru agar dapat membangun software berkualitas menggunakan PHP.
+ditujukan bagi para _programmer_ baru agar dapat membangun software berkualitas menggunakan PHP.
 
 Sebetulnya, tidak ada satu cara autentik untuk menggunakan PHP. Namun, website ini
-bermaksud untuk memperkenalkan _programmer_ PHP baru tentang hal-hal yang tidak mereka temukan selama ini.
+bermaksud untuk mengenalkan _programmer_ PHP baru kepada hal-hal yang tidak mereka temukan selama ini.
 
 Bagi _programmer_ _senior_, tulisan ini dapat menjadi penyegar pada apa yang telah
 mereka lakukan selama ini. Tulisan ini juga akan memperbarui cara-cara lama yang sudah
