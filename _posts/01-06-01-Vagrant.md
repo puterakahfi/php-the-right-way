@@ -5,17 +5,22 @@ anchor: vagrant
 
 ## Vagrant {#vagrant_title}
 
-Menjalankan aplikasi Anda pada lingkungan yang berbeda dalam pengembangan dan produksi dapat menyebabkan bug aneh
-muncul ketika Anda pergi hidup. Ini juga sulit untuk menjaga lingkungan pembangunan yang berbeda up to date dengan sama
-Versi untuk semua pustaka yang digunakan ketika bekerja dengan tim pengembang.
+Seringkali _developer_ menemukan masalah ketika menjalankan aplikasi pada saat _development_ dan _production_.
+Masalah itu ditimbulkan karena perbedaan environment. Misalkan _developer_ membuat aplikasi di Windows, 
+sedangkan server produksi menggunakan Linux.
 
-Jika Anda mengembangkan di Windows dan menggunakan untuk Linux (atau apa pun non-Windows) atau sedang mengembangkan dalam sebuah tim, Anda
-harus mempertimbangkan menggunakan mesin virtual. Ini terdengar rumit, tapi menggunakan [Vagrant] [gelandangan] Anda dapat mengatur sederhana
-mesin virtual dengan hanya beberapa langkah. Kotak dasar ini kemudian dapat diatur secara manual, atau Anda dapat menggunakan "pengadaan"
-software seperti [Wayang] [wayang] atau [Chef] [chef] untuk melakukan ini untuk Anda. Provisioning kotak dasar adalah cara yang bagus untuk
-memastikan bahwa beberapa kotak ditetapkan dalam cara yang identik dan menghilangkan kebutuhan bagi Anda untuk menjaga rumit
-"set up" daftar perintah. Anda juga bisa "menghancurkan" kotak dasar Anda dan menciptakan tanpa banyak langkah manual, sehingga
-mudah untuk membuat "fresh" instalasi.
+Masalah tersebut semakin terasa ketika anda bekerja dalam tim di mana setiap anggota menggunakan OS yang berbeda-beda.
+Satu orang menggunakan Windows, satu orang menyukai MacOS, dan lainnya memilih Linux.
+
+Jika itulah yang Anda alami, mungkin ada baiknya Anda mempertimbangkan menggunakan mesin virtual dalam _development_.
+Kedengarannya rumit, tapi dengan menggunakan [Vagrant], Anda dapat dengan mudah mengatur 
+mesin virtual hanya dalam beberapa langkah. 
+
+Mesin virtual ini kemudian dapat diatur secara manual, atau Anda dapat menggunakan "provisioning"
+software seperti [Puppet] atau [Chef] untuk melakukannya. Provisioning mesin virtual adalah cara yang bagus untuk
+memastikan bahwa beberapa mesin ditetapkan dalam cara yang identik. Dan menghilangkan kebutuhan bagi Anda untuk 
+men-setup nya secara manual. Anda bahkan dapat dengan mudah menghapus mesin virtual tersebut dan membuatnya lagi 
+dari awal.
 
 Vagrant menciptakan shared folder yang digunakan untuk berbagi kode antara host dan mesin virtual Anda, yang berarti Anda dapat
 membuat dan mengedit file Anda pada mesin host Anda dan kemudian menjalankan kode di dalam mesin virtual Anda.
