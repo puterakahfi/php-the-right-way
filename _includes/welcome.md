@@ -1,16 +1,16 @@
 # Pendahuluan
 
-Banyak tutorial kuno menyesatkan pengembang PHP yang baru bergabung.
-Mengajarkan cara yang buruk dan menyebarkan contoh kode yang tidak aman.
-PHP: The Right Way adalah referensi yang mengikuti standar pengkodean modern,
+Di internet, ada banyak tutorial kuno yang menyesatkan _programmer_ PHP.
+Mengajarkan cara buruk dan menyebarkan contoh kode yang tidak aman.
+___PHP: The Right Way___ adalah referensi yang mengikuti standar pengkodean modern,
 ditujukan bagi para pengembang PHP baru.
 
-Sebetulnya, tidak ada satu cara autentik untuk menggunakan PHP. Website ini bertujuan untuk memperkenalkan 
-pengembang PHP baru tentang topik-topik yang tidak mereka temukan selama ini.
+Sebetulnya, tidak ada satu cara autentik untuk menggunakan PHP. Namun, website ini
+bermaksud untuk memperkenalkan _programmer_ PHP baru tentang hal-hal yang tidak mereka temukan selama ini.
 
-Bagi pengembang berpengalaman, tulisan ini dapat memberikan ide-ide segar tentang topik yang telah
-mereka lakukan selama ini tetapi tanpa mengikuti perkembangan. Website ini tidak akan memberitahu Anda
-alat-alat yang digunakan, tapi akan menawarkan saran dan pilihan solusi.
+Bagi _programmer_ _senior_, tulisan ini dapat menjadi penyegar pada apa yang telah
+mereka lakukan selama ini. Tulisan ini juga akan memperbarui cara-cara lama yang sudah
+terlanjur mendarahdaging.
 
 Dokumen ini akan terus diperbarui dengan informasi dan contoh-contoh terbaru sehingga akan terus bermanfaat.
 
@@ -34,14 +34,14 @@ _PHP: The Right Way_ sudah diterjemahkan ke banyak bahasa lain:
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
 
-## Bagaimana berkontribusi?
+## Ingin berkontribusi?
 
-Bantulah website ini untuk menjadi referensi terbaik bagi para progammer PHP baru! [berkontribusi di GitHub][1]
+Ayo bantu website ini agar menjadi sumber terbaik bagi para _progammer_ PHP baru! [Ayo berkontribusi di GitHub][1]
 
-## Sebarkan
+## Bantu sebarkan
 
 _PHP: The Right Way_ memiliki gambar _banner_ yang bisa dipasang di website Anda. Tunjukkan kepedulian anda
-kepada programmer PHP baru untuk mengetahui di mana tempat mendapatkan informasi yang bagus.
+kepada _programmer_ PHP baru untuk mengetahui letak informasi yang bagus.
 
 [Gambar Banner][2]
 
