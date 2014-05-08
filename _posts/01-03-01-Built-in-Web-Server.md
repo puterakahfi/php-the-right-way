@@ -6,7 +6,7 @@ anchor: builtin_web_server
 
 ## Web server bawaan {#builtin_web_server_title}
 
-Anda dapat mulai belajar PHP dengan menggunakan web server bawaan (minimal PHP 5.4). Untuk memulai server, jalankan perintah berikut dari terminal Anda dalam root web:
+Anda dapat mulai belajar PHP dengan menggunakan web server bawaan (minimal PHP 5.4). Untuk memulai server, jalankan perintah berikut dari terminal Anda dalam sebuah directory:
 
     > php -S localhost:8000
 

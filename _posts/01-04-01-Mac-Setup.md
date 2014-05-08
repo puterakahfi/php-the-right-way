@@ -6,13 +6,13 @@ anchor: mac_setup
 
 ## Setup di Mac {#mac_setup_title}
 
-OSX sudah dikemas dengan PHP, tetapi biasanya sedikit tertinggal dari versi terbaru. Lion datang dengan PHP 5.3.6,
-Mountain Lion memiliki 5.3.10, dan Mavericks memiliki 5.4.17.
+OSX sudah dikemas dengan PHP, tetapi biasanya sedikit tertinggal dari versi terbaru. _Lion_ datang dengan PHP 5.3.6,
+_Mountain Lion_ membawa PHP 5.3.10, dan _Mavericks_ membawa PHP 5.4.17.
 
-Untuk memperbarui PHP di OSX, Anda bisa mendapatkannya diinstal melalui sejumlah Mac [paket manajer] [mac-paket-manajer],
+Untuk memperbarui PHP di OSX, Anda bisa menginstalnya melalui [mac-package-managers],
 dan dianjurkan dengan [php-OSX oleh Liip] [php-osx-download].
 
-Pilihan lainnya adalah dengan [mengkompilasi sendiri] [mac-kompilasi], dalam kasus ini pastikan Xcode telah diinstal.
+Pilihan lainnya adalah dengan [mengkompilasi sendiri] [mac-compile], dalam kasus ini pastikan Xcode telah diinstal.
 Atau pengganti ["Tools Command Line untuk Xcode"] Apple [apple-developer] dapat didownload dari Apple Mac Developer Center.
 
 Untuk paket "all-in-one" termasuk PHP, web server Apache, dan database MySQL, dengan kontrol yang baik dilengkapi GUI, 
