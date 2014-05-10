@@ -5,19 +5,18 @@ anchor: code_style_guide
 
 # Panduan Code Style  {#code_style_guide_title}
 
-Komunitas PHP adalah besar dan beragam, terdiri dari perpustakaan yang tak terhitung banyaknya, kerangka kerja, dan komponen. Adalah umum bagi
-Pengembang PHP untuk memilih beberapa ini dan menggabungkan mereka ke dalam satu proyek. Adalah penting bahwa kode PHP mematuhi
-(sedekat mungkin) dengan gaya kode umum untuk memudahkan bagi pengembang untuk mencampur dan mencocokkan berbagai perpustakaan untuk
-proyek-proyek mereka.
+Komunitas PHP sangatlah besar dan beragam. Ada banyak _library_, _framework_, dan _component_ yang sudah tersedia.
+Dalam memilih _library_-_library_ dan _framework_ ini dan menggunakannya dalam sebuah proyek, _developer_ perlu
+mematuhi aturan _code style_ yang digunakan pada _framework_ tersebut.
 
-The [Kerangka Interop Grup] [ara] telah mengusulkan dan menyetujui serangkaian rekomendasi gaya. Tidak semua dari mereka terkait
-kode-gaya, tapi mereka yang melakukan [PSR-0] [psr0], [PSR-1] [PSR1], [PSR-2] [psr2] dan [PSR-4] [psr4]. rekomendasi ini
-hanyalah seperangkat aturan bahwa beberapa proyek seperti Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium,
-dll mulai mengadopsi. Anda dapat menggunakannya untuk proyek-proyek Anda sendiri, atau terus menggunakan gaya pribadi Anda sendiri.
+[The PHP Framework Interop Group] [fig] telah mengusulkan dan menyetujui serangkaian rekomendasi gaya pengkodean.
+Meskipun tidak semuanya terkait dengan _code style_, tapi mereka yang merumuskan [PSR-0] [psr0], [PSR-1] [PSR1], [PSR-2] [psr2] dan [PSR-4] [psr4].
+
+Rekomendasi ini hanyalah seperangkat aturan dan sudah diadopsi oleh beberapa proyek seperti Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, dll.
+Anda dapat memilih antara mengikuti PSR untuk proyek-proyek Anda sendiri, atau terus menggunakan gaya pribadi Anda sendiri.
 
 Idealnya Anda harus menulis kode PHP yang mematuhi standar yang dikenal. Ini bisa berupa kombinasi dari PSR, atau satu
-standar coding yang dibuat oleh PEAR atau Zend. Ini berarti pengembang lain dapat dengan mudah membaca dan bekerja dengan kode Anda,
-dan aplikasi yang menerapkan komponen dapat memiliki konsistensi bahkan ketika bekerja dengan banyak kode pihak ketiga.
+standar coding yang dibuat oleh PEAR atau Zend. Ini berarti _developer_ lain dapat dengan mudah membaca dan bekerja dengan kode Anda, dan aplikasi yang menerapkan komponen dapat memiliki konsistensi bahkan ketika bekerja dengan banyak kode pihak ketiga.
 
 * [Baca tentang PSR-0][psr0]
 * [Baca tentang PSR-1][psr1]
@@ -27,13 +26,11 @@ dan aplikasi yang menerapkan komponen dapat memiliki konsistensi bahkan ketika b
 * [Baca tentang Zend Coding Standards][zend-cs]
 * [Baca tentang Symfony Coding Standards][symfony-cs]
 
-Anda dapat menggunakan [PHP_CodeSniffer] [phpcs] untuk memeriksa kode terhadap salah satu dari rekomendasi tersebut, dan plugin untuk editor teks seperti [Text Sublime 2] [st-cs] diberikan umpan balik real time.
+Anda dapat menggunakan [PHP_CodeSniffer] [phpcs] untuk memeriksa kode terhadap salah satu dari rekomendasi tersebut, dan plugin untuk editor teks seperti [Text Sublime 2] [st-cs] dapat memberikan _feedback_ secara real time.
 
-Gunakan Fabien Potencier ini [PHP Coding Standards Fixer] [phpcsfixer] untuk secara otomatis mengubah sintaks kode Anda sehingga
-sesuai dengan standar-standar ini, menghemat dari memperbaiki setiap masalah dengan tangan.
+Gunakan _tools_ dari Fabien Potencier ini [PHP Coding Standards Fixer] [phpcsfixer] untuk secara otomatis mengubah sintaks kode Anda sehingga sesuai dengan standar-standar ini, menghemat waktu untuk memperbaiki setiap masalah secara manual.
 
-Bahasa Inggris lebih disukai untuk semua nama simbol dan infrastruktur kode. Komentar dapat ditulis dalam bahasa yang mudah dibaca
-oleh semua pihak saat ini dan masa depan yang mungkin bekerja di basis kode.
+Bahasa Inggris lebih disukai untuk semua nama simbol dan infrastruktur kode. Komentar dapat ditulis dalam bahasa yang mudah dibaca oleh semua pihak saat ini dan masa depan yang akan mengerjakan _source code_ tersebut.
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
