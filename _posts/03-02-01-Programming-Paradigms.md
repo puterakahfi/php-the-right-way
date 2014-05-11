@@ -6,19 +6,18 @@ anchor: programming_paradigms
 
 ## Paradigma Pemrograman {#programming_paradigms_title}
 
-PHP adalah fleksibel, bahasa dinamis yang mendukung berbagai teknik pemrograman. Hal ini telah berkembang secara dramatis selama bertahun-tahun, terutama menambahkan model solid berorientasi objek di PHP 5.0 (2004), fungsi anonim dan ruang nama di PHP 5.3 (2009), dan sifat-sifat di PHP 5.4 (2012).
+PHP adalah bahasa pemrograman fleksibel, dinamis, dan mendukung berbagai teknik pemrograman. Perkembangan yang sangat pesat telah terjadi di PHP selama bertahun-tahun, terutama dukungan terhadap pemrograman berorientasi objek (OOP) di PHP 5.0 (2004), _anonymous function_ dan _namespace_ di PHP 5.3 (2009), dan _trait_ di PHP 5.4 (2012).
 
 ### Pemrograman Berorientasi Object
 
-PHP memiliki satu set yang sangat lengkap fitur pemrograman berorientasi obyek termasuk dukungan untuk kelas, kelas abstrak, interface, pewarisan, konstruktor, kloning, pengecualian, dan banyak lagi.
+PHP sangat mendukung pemrograman berorientasi obyek termasuk dukungan untuk _class_, _abstract class_, _interface_, _inheritance_, _constructor_, _cloning_, _exception_, dan banyak lagi.
 
 * [Baca tentang Pemrograman Berorientasi Object pada PHP][oop]
 * [Baca tentang Traits][traits]
 
 ### Pemrograman Fungsional
 
-PHP mendukung fungsi kelas-pertama, yang berarti bahwa fungsi dapat ditugaskan ke variabel. Kedua user-defined dan built-in
-fungsi dapat direferensikan oleh variabel dan dipanggil secara dinamis. Fungsi dapat disahkan sebagai argumen untuk lainnya
+PHP mendukung _first class function_, yang berarti bahwa fungsi dapat dimasukkan ke dalam sebuah variabel. Kedua user-defined dan built-in fungsi dapat direferensikan oleh variabel dan dipanggil secara dinamis. Fungsi dapat disahkan sebagai argumen untuk lainnya
 fungsi (fitur yang disebut fungsi-order yang lebih tinggi) dan fungsi dapat kembali fungsi lainnya.
 
 Rekursi, sebuah fitur yang memungkinkan fungsi untuk menyebut dirinya didukung oleh bahasa, tetapi sebagian besar fokus kode PHP pada iterasi.
