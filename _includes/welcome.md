@@ -45,5 +45,5 @@ kepada _programmer_ PHP baru untuk mengetahui letak informasi yang bagus.
 
 [Gambar Banner][2]
 
-[1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
+[1]: https://github.com/andylibrian/php-the-right-way/tree/gh-pages
 [2]: /banners.html
