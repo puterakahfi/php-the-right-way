@@ -1,11 +1,11 @@
 auto: true
 safe: true
-server: true
-server_port: 4000
+#server: true
+port: 4000
 baseurl: /
 url: http://localhost:4000
 
-pygments: true
+highlighter: true
 #markdown: maruku
 markdown: kramdown
 permalink: date
